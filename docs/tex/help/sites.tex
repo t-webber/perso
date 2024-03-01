@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage[margin=1cm]{geometry}
+\usepackage[colorlinks, urlcolor=blue]{hyperref}
+\usepackage{bibunits}
+
+\defaultbibliography{bib}
+\defaultbibliographystyle{plain}
+
+\pagestyle{empty}
+
+
+\newcounter{var}
+\setcounter{var}{0}
+
+\let\oldsection\section
+\renewcommand{\section}[2]{
+    \ifnum\value{var}=0\oldsection*{Les 10 références principales}
+    \addtocounter{var}{1}
+    \else
+\oldsection*{Références complémentaires}\fi
+}
+
+
+\begin{document}
+
+\begin{center}
+
+{\bfseries
+{\LARGE PACE}
+
+\phantom i
+
+{\Large Tom Webber}
+}
+
+\phantom i
+
+{\large Groupe 20} 
+
+\phantom i
+
+{\bfseries\large
+Nucléaire et radioactivité
+
+Solutions durables ou catastrophes inévitables
+}
+
+\end{center}
+
+
+\flushleft
+
+\begin{bibunit}
+\nocite{Becquerel, CEA, curie_museum, EDF, greenpeace, IAEA, ITER, RPUE, Sfen_2023, IRSN}
+\putbib
+\end{bibunit}
+
+\begin{bibunit}
+\nocite{radioactive_2019, Futura, econ}
+\putbib
+\end{bibunit}
+
+\end{document}
