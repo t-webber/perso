@@ -1,0 +1,98 @@
+.box-floated {
+  margin: 15px;
+  max-width: 40%;
+}
+
+.floatingtextbox {
+  border-radius: 10px;
+  background: hsl(219, 66%, 67%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+  position: relative;
+}
+
+.floatingtextbox .title {
+  text-align: center;
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  border-radius: 4px;
+  padding: 3px 10px;
+  margin: 3px;
+}
+
+.floatingtextbox .children {
+  text-align: justify;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.notebox {
+  margin: 20px 4px;
+  float: left;
+  width: calc(100%-16px);
+  border: 3px solid black;
+  position: relative;
+  display: block;
+  border-radius: 3px;
+}
+
+.notebox .title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 3px;
+  width: 40%;
+  top: -15px;
+}
+
+.notebox .children {
+  padding: 20px;
+  text-align: justify;
+}
+
+.imageboxwrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  max-width: 30%;
+  margin: 15px;
+  padding: 15px;
+}
+
+.imagetitle {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.imageboxwrapper img {
+  max-width: 100%;
+  margin: 20px 0 5px 0;
+}
+
+.imagesourcetext {
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+  max-width: 100%;
+}
+
+.imagesourceleft {
+  text-align: left;
+}
+.imagesourceright {
+  text-align: right;
+}
+
+.imagesourcetext::before {
+  content: "";
+}

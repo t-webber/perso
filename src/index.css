@@ -3,3 +3,11 @@ body {
   padding: 0;
   margin: 0;
 }
+
+a {
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}

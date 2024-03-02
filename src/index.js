@@ -4,14 +4,31 @@ import "./index.css";
 
 import reportWebVitals from "./reportWebVitals";
 
-import PACE from "./PACE/PACE";
-import CV from "./CV/CV";
+import PACE from "./PACE/PACE.tsx";
+import CV from "./CV/CV.js";
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  useNavigate,
+} from "react-router-dom";
+
+const Redirect = ({ to }) => {
+  const navigate = useNavigate();
+  React.useEffect(() => {
+    navigate(to);
+  }, [navigate, to]);
+
+  return null;
+};
 
 const router = createBrowserRouter([
   {
     path: "/",
+    element: <Redirect to="/pace" />,
+  },
+  {
+    path: "/about",
     element: <CV />,
   },
   {
@@ -27,7 +44,4 @@ root.render(
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
