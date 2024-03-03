@@ -1,3 +1,5 @@
+import React from "react";
+
 const Conclusion = () => {
   return (
     <div className="chapter-container">

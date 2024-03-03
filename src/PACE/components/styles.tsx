@@ -1,9 +1,9 @@
 import React from "react";
 
-const Sc = ({ s }) => {
+const Sc = ({ str }: { str: string }) => {
   return (
     <>
-      <span style={{ fontVariant: "small-caps" }}>{s}</span>
+      <span style={{ fontVariant: "small-caps" }}>{str}</span>
       <sup>e</sup>
     </>
   );

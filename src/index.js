@@ -1,41 +1,24 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
+import "./body.css";
 
-import reportWebVitals from "./reportWebVitals";
+import { RouterProvider } from "react-router-dom";
+import { routes } from "./router.tsx";
+import { createBrowserRouter } from "react-router-dom";
 
-import PACE from "./PACE/PACE.tsx";
-import CV from "./CV/CV.js";
-
-import {
-  createBrowserRouter,
-  RouterProvider,
-  useNavigate,
-} from "react-router-dom";
-
-const Redirect = ({ to }) => {
-  const navigate = useNavigate();
-  React.useEffect(() => {
-    navigate(to);
-  }, [navigate, to]);
-
-  return null;
+const reportWebVitals = (onPerfEntry) => {
+  if (onPerfEntry && onPerfEntry instanceof Function) {
+    import("web-vitals").then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+      getCLS(onPerfEntry);
+      getFID(onPerfEntry);
+      getFCP(onPerfEntry);
+      getLCP(onPerfEntry);
+      getTTFB(onPerfEntry);
+    });
+  }
 };
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Redirect to="/pace" />,
-  },
-  {
-    path: "/about",
-    element: <CV />,
-  },
-  {
-    path: "/pace",
-    element: <PACE />,
-  },
-]);
+const router = createBrowserRouter(routes);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

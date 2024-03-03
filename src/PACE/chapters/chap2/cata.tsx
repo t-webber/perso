@@ -5,16 +5,16 @@ import { FactBox } from "../../components/boxes";
 const Cata = () => {
   return (
     <>
+      <h3>De la production d'énergie aux catastrophes nucléaires</h3>
       <FactBox title="Tchernobyl" side="right">
         La catastrophe de Tchernobyl est l'un des pires accidents nucléaires de
         l'histoire. Le 26 avril 1986, lors d'un test de sécurité au réacteur
         numéro 4 de la centrale nucléaire de Tchernobyl, située près de la ville
-        de Pripyat en Ukraine (alors partie de l'Union soviétique), une série
-        d'erreurs humaines et de défaillances techniques ont conduit à une
-        violente explosion. Cette explosion a détruit le réacteur et libéré
-        d'énormes quantités de matières radioactives dans l'atmosphère. Les
-        conséquences de l'accident ont été catastrophiques. Un nuage radioactif
-        s'est propagé sur de vastes régions d'Europe, contaminant des terres
+        de Pripyat en Ukraine, une série d'erreurs humaines et de défaillances
+        techniques ont conduit à une violente explosion, détruisant un des
+        réacteur. Cette explosion a libéré d'énormes quantités de matières
+        radioactives dans l'atmosphère, format un nuage radioactif qui s'est
+        propagé sur de vastes régions d'Europe, contaminant des terres
         agricoles, des villes et des populations. Les effets à long terme sur la
         santé, notamment le cancer et les malformations congénitales, ont été
         dévastateurs pour de nombreuses personnes vivant dans les zones
@@ -22,8 +22,7 @@ const Cata = () => {
         massifs ont été entrepris, notamment l'enterrement de grandes quantités
         de sol contaminé et la construction d'un sarcophage en béton autour du
         réacteur endommagé pour le confiner. Des milliers de personnes ont été
-        évacuées de la zone et Pripyat est devenue une ville fantôme, figée dans
-        le temps depuis l'accident.
+        évacuées de la zone et Pripyat, aujourd'hui dépourvue de vie.
       </FactBox>
       <h4>Production quantitative prometteuse</h4>
       Malgré les risques, l'énergie nucléaire offre un potentiel énorme en

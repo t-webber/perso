@@ -1,16 +1,13 @@
-import {
-  // DefinitionBox,
-  ImageBox,
-  // NoteBox,
-  FactBox,
-} from "../../components/boxes";
+import React from "react";
+import { ImageBox, DefinitionBox } from "../../components/boxes";
 
 const Medoc = () => (
   <>
+    <h3>De la radiothérapie à la médecine nucléaire</h3>
+
     <p>
       Dans l'ombre des débats traitant des dangers du nucléaire et de la
-      radioactivité, ces derniers aident la société depuis bien longtemps dans
-      le domaine sanitaire.
+      radioactivité, la medecine profite à plein régime de ces derniers.
     </p>
     <h4>Radiothérapie</h4>
     <p>
@@ -54,15 +51,18 @@ const Medoc = () => (
       Mais elle ne se limita pas seulement à la détection des blessures. Elle
       traita les tissus affectés par les lésions, ouvrant ainsi la voie à une
       nouvelle ère dans la médecine militaire. Les rayons X, émis par les
-      substances radioactives découvertes par Curie elle-même, démontrèrent une
+      substances radioactives découvertes par Curie elle-même, ont démontré une
       efficacité remarquable dans la réduction des tumeurs et dans la
-      destruction des cellules cancéreuses. L'héritage de Marie Curie dans le
-      domaine de la radiothérapie perdure aujourd'hui, rappelant comment une
-      scientifique dévouée a pu transformer une période de conflit en une
-      opportunité de progrès médical. Sa vision et son courage ont ouvert la
-      voie à des traitements oncologiques modernes, établissant la radiothérapie
-      comme l'une des armes les plus puissantes dans la lutte contre le cancer,
-      et ce, bien au-delà des champs de bataille de la Première Guerre mondiale.
+      destruction des cellules cancéreuses.
+    </p>
+    <p>
+      L'héritage de Marie Curie dans le domaine de la radiothérapie perdure
+      aujourd'hui, rappelant comment une scientifique dévouée a pu transformer
+      une période de conflit en une opportunité de progrès médical. Sa vision et
+      son courage ont ouvert la voie à des traitements oncologiques modernes,
+      établissant la radiothérapie comme l'une des armes les plus puissantes
+      dans la lutte contre le cancer, et ce, bien au-delà des champs de bataille
+      de la Première Guerre mondiale.
     </p>
     <h4>Médecine nucléaire</h4>
     <p>
@@ -72,7 +72,7 @@ const Medoc = () => (
       radiations émises par ces traceurs lorsqu'ils sont introduits dans le
       corps.
     </p>
-    <FactBox side="right" title="Tomographie par émission de positions">
+    <DefinitionBox side="right" title="Tomographie par émission de positions">
       La tomographie par émission de positons (TEP) est une technique d'imagerie
       médicale qui utilise la radioactivité pour visualiser l'activité
       métabolique des tissus à l'intérieur du corps. En injectant un traceur
@@ -83,7 +83,7 @@ const Medoc = () => (
       détecter diverses affections. La TEP offre une visualisation précise de la
       fonction des tissus, permettant une prise en charge clinique plus efficace
       des patients.
-    </FactBox>
+    </DefinitionBox>
     <p>
       Dans le domaine du diagnostic, la médecine nucléaire offre des techniques
       d'imagerie avancées telles que la tomographie par émission de positons

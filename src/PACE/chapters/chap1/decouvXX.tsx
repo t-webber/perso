@@ -10,17 +10,20 @@ import {
 const DecouvXX = () => {
   return (
     <>
+      <h3>Histoire et découvertes scientifiques</h3>
       <div className="blockquote">
         Il n'y a plus rien à découvrir en physique aujourd'hui, tout ce qui
         reste est d'améliorer la précision des mesures.
       </div>
       <DefinitionBox side="right" title="Thermodynamique">
-        La thermodynamique est la branche de la physique qui étudie les échanges
-        mécaniques (mouvement) et calorifiques (chaleur). Tirant son étymolgie
-        des mots θερμός (thermos, signifiant <em>chaleur</em>) et δύναμις
-        (dynamis, signifiant <em>puissance</em>), le mot thermodynamique a été
-        introduit en 1864, par le physicien écossais William Thomson (Lord
-        Kelvin).
+        <>
+          La thermodynamique est la branche de la physique qui étudie les
+          échanges mécaniques (mouvement) et calorifiques (chaleur). Tirant son
+          étymolgie des mots θερμός (thermos, signifiant <em>chaleur</em>) et
+          δύναμις (dynamis, signifiant <em>puissance</em>), le mot
+          thermodynamique a été introduit en 1864, par le physicien écossais
+          William Thomson (Lord Kelvin).
+        </>
       </DefinitionBox>
       <p>
         Tel fut le propos que tenait Lord Kelvin en 1900. Ce dernier est
@@ -92,8 +95,8 @@ const DecouvXX = () => {
         En 1903, Marie et Pierre Curie, ainsi qu'Henri Becquerel, ont reçu le
         prix Nobel de physique pour leurs travaux sur la radioactivité.
       </p>
-      <div style={{ height: "50px" }}></div>
-      <FactBox side="right" title="Fait historique">
+      {/* <div style={{ height: "50px" }}></div> */}
+      <FactBox side="right" title="Fait historique" style={{ width: "30vw" }}>
         Becquerel avait découvert la radioactivité en 1896, mais il ne savait
         pas encore ce qu'était ce phénomène. Marie Curie a repris ses travaux et
         a découvert que la radioactivité était due à l'émission d'énergie par
@@ -104,6 +107,7 @@ const DecouvXX = () => {
         side="left"
         title="Médaille du prix Nobel"
         src="Jonathunder, Medal: Erik Lindberg, (Wikimedia, Public Domain)"
+        style={{ width: "25vw" }}
       />
       <p>
         La découverte de la radioactivité par Marie et Pierre Curie a été une
@@ -111,7 +115,7 @@ const DecouvXX = () => {
         développement de nouvelles technologies, telles que la radiothérapie et
         la médecine nucléaire, dont nous parlerons plus loin.
       </p>
-      <FactBox side="right" title="Fait historique">
+      <FactBox side="right" title="Fait historique" style={{ width: "30vw" }}>
         Marie Curie est devenue la première femme à recevoir un prix Nobel, et
         la seule à en recevoir deux, dans deux disciplines différentes. Elle a
         également été la première personne à recevoir deux prix Nobel en
@@ -183,7 +187,7 @@ const DecouvXX = () => {
         title="Schéma expliquant la fission nucléaire"
         src="Wikimedia (Public domain)"
       /> */}
-      <h4>Découverte de la fission nucléaire nucléaire</h4>
+      <h4>Découverte de la fission nucléaire</h4>
       <p>
         Dans les années 1950 et 1960, les physiciens ont découvert de nombreuses
         nouvelles particules subatomiques. Ces découvertes ont conduit au

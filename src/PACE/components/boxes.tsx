@@ -1,6 +1,10 @@
 import React from "react";
-
 import "./boxes.css";
+
+// import { IconBase, IconType } from "react-icons";
+// import { HiOutlineQuestionMarkCircle } from "react-icons/hi";
+import { BsExclamationCircle } from "react-icons/bs";
+import { GoQuestion } from "react-icons/go";
 
 const realTitle = (title: string, defaultTitle: string) => {
   if (title === undefined) {
@@ -10,45 +14,136 @@ const realTitle = (title: string, defaultTitle: string) => {
   }
 };
 
-const FloatingTextBoxWrapper = ({
+const marginSpace = (side: "left" | "right" | "none") => {
+  if (side === "left") {
+    return { marginRight: "25px" };
+  } else if (side === "right") {
+    return { marginLeft: "25px" };
+  } else {
+    return {};
+  }
+};
+
+interface FloatingTextBoxWrapperProps {
+  children: React.ReactElement | string;
+  borderColor: `#${string}`;
+  backgroundColor: `#${string}`;
+  side: "left" | "right" | "none";
+  title: string;
+  style?: React.CSSProperties;
+  titlestyle?: React.CSSProperties;
+  Icon: React.ReactElement;
+}
+
+const FloatingTextBoxWrapper: React.FC<FloatingTextBoxWrapperProps> = ({
   children,
   side,
+  borderColor,
+  backgroundColor,
   title,
   style,
   titlestyle,
+  Icon,
 }) => {
   return (
     <div className="box-floated" style={{ float: side }}>
-      <div className="floatingtextbox" style={style}>
-        <span className="h4 title" style={titlestyle}>
+      <div
+        className="floatingtextbox"
+        style={{
+          border: `3px solid ${borderColor}`,
+          backgroundColor: backgroundColor,
+          ...style,
+        }}
+      >
+        <span
+          className="h4 title"
+          style={{
+            border: `3px solid ${borderColor}`,
+            backgroundColor: backgroundColor,
+            ...titlestyle,
+          }}
+        >
           {realTitle(title, "Fait étonnant")}
         </span>
+        <span className="floatingicon">{Icon}</span>
         <div className="children">{children}</div>
       </div>
     </div>
   );
 };
 
-const DefinitionBox = ({ side, title, children }) => {
+interface DefinitionBoxProps {
+  side: "left" | "right" | "none";
+  title: string;
+  children: React.ReactElement | string;
+  style?: React.CSSProperties;
+}
+
+const DefinitionBox: React.FC<DefinitionBoxProps> = ({
+  side,
+  title,
+  children,
+  style,
+}) => {
+  let borderColor: `#${string}` = "#c82040";
+  let backgroundColor: `#${string}` = "#ffeeee";
   return (
     <FloatingTextBoxWrapper
       side={side}
       title={title}
-      style={{ border: "3px solid #c82040", background: "#f2f2f2" }}
-      titlestyle={{ border: "3px solid #c82040", background: "#f2f2f2" }}
+      borderColor={borderColor}
+      backgroundColor={backgroundColor}
+      style={{
+        ...marginSpace(side),
+        ...style,
+      }}
+      Icon={
+        <GoQuestion
+          style={{
+            color: borderColor,
+            background: backgroundColor,
+            borderRadius: "50px",
+          }}
+        />
+      }
     >
       {children}
     </FloatingTextBoxWrapper>
   );
 };
 
-const FactBox = ({ side, title, children }) => {
+const FactBox = ({
+  side,
+  title,
+  children,
+  style,
+}: {
+  side: "left" | "right" | "none";
+  title: string;
+  children: React.ReactElement | string;
+  style?: React.CSSProperties;
+}) => {
+  let borderColor: `#${string}` = "#3b47ce";
+  let backgroundColor: `#${string}` = "#e3e8ff";
   return (
     <FloatingTextBoxWrapper
       side={side}
       title={title}
-      style={{ border: "2px solid blue", background: "#aac4f4" }}
-      titlestyle={{ border: "2px solid blue", background: "#aac4f4" }}
+      borderColor={borderColor}
+      backgroundColor={backgroundColor}
+      style={{
+        ...marginSpace(side),
+        ...style,
+      }}
+      Icon={
+        <BsExclamationCircle
+          style={{
+            color: borderColor,
+            background: backgroundColor,
+            borderRadius: "50px",
+          }}
+        />
+      }
     >
       {children}
     </FloatingTextBoxWrapper>
@@ -91,8 +186,8 @@ const NoteBox = ({
   style,
 }: {
   title: string;
-  children: any;
-  style?: any;
+  children: React.ReactElement | string;
+  style?: React.CSSProperties;
 }) => {
   return (
     <div className="notebox" style={style}>

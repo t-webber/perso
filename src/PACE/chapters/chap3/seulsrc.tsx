@@ -1,6 +1,10 @@
+import React from "react";
+
 const SeuleSource = () => {
   return (
     <>
+      <h3>Seule source énergétique durable ?</h3>
+
       <h4>Les solutions utopiques de l'éolien et du solaire</h4>
       <p>
         Face à l'urgence climatique et à la nécessité de réduire notre
