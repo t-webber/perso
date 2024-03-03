@@ -24,6 +24,10 @@ const routes = [
     element: <CV />,
   },
   {
+    path: "/cv",
+    element: <Redirect to="/about" />,
+  },
+  {
     path: "/pace",
     element: <PACE />,
   },

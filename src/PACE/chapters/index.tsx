@@ -9,65 +9,89 @@ declare var require: NodeRequire & {
   ) => any;
 };
 
-const getComponents = (componentContext: {
-  keys: () => {
-    (): any;
-    new (): any;
-    map: {
-      (arg0: any): {
-        (): any;
-        new (): any;
-        flatMap: {
-          (
-            arg0: (
-              module:
-                | {
-                    [s: string]: // import Medoc from "./chap1/medoc";
-                    unknown;
-                  }
-                | ArrayLike<unknown>
-            ) => unknown[]
-          ): (() => any)[];
-          new (): any;
-        };
-      };
-      new (): any;
-    };
-  };
-}) => {
-  // const componentContext = require.context(folderPath, true, /\.tsx?$/);
+// const getComponents = (componentContext: {
+//   keys: () => {
+//     (): any;
+//     new (): any;
+//     map: {
+//       (arg0: any): {
+//         (): any;
+//         new (): any;
+//         flatMap: {
+//           (
+//             arg0: (
+//               module:
+//                 | {
+//                     [s: string]: // import Medoc from "./chap1/medoc";
+//                     unknown;
+//                   }
+//                 | ArrayLike<unknown>
+//             ) => unknown[]
+//           ): (() => any)[];
+//           new (): any;
+//         };
+//       };
+//       new (): any;
+//     };
+//   };
+// }) => {
+//   // const componentContext = require.context(folderPath, true, /\.tsx?$/);
 
-  return componentContext
-    .keys()
-    .map(componentContext)
-    .flatMap((module: { [s: string]: unknown } | ArrayLike<unknown>) =>
-      Object.values(module)
-    )
-    .map((func: () => any) => func());
-};
+//   return componentContext
+//     .keys()
+//     .map(componentContext)
+//     .flatMap((module: { [s: string]: unknown } | ArrayLike<unknown>) =>
+//       Object.values(module)
+//     )
+//     .map((func: () => any) => func());
+// };
+
+function getComponents(requireContext: {
+  (arg0: React.Key | null | undefined): { (): any; new (): any; default: any };
+  (arg0: React.Key | null | undefined): { (): any; new (): any; default: any };
+  keys: any;
+}) {
+  var imported: string[] = [];
+  var result: React.ReactNode[] = [];
+  requireContext.keys().forEach((key: React.Key | null | undefined) => {
+    const Component = requireContext(key).default;
+
+    if (Component && !imported.includes(Component.name)) {
+      imported.push(Component.name);
+      result.push(<Component key={key} />);
+    }
+  });
+  return result;
+}
+
+const components1: React.ReactNode[] = getComponents(
+  require.context("./chap1", true, /\.tsx$/)
+);
+const components2: React.ReactNode[] = getComponents(
+  require.context("./chap2", true, /\.tsx$/)
+);
+const components3: React.ReactNode[] = getComponents(
+  require.context("./chap3", true, /\.tsx$/)
+);
 
 const Chapter1 = () => {
-  const components: React.ReactNode[] = getComponents(
-    require.context("./chap1", true, /\.tsx?$/)
-  );
-
   return (
     <Chapter
       title="Découverte d'une source d'énergie prometteuse"
-      sections={components}
+      sections={components1}
     />
   );
 };
 
 const Chapter2 = () => {
-  const components: React.ReactNode[] = getComponents(
-    require.context("./chap2", true, /\.tsx?$/)
-  );
+  // const components: React.ReactNode[] = getComponents(
+  //   require.context("./chap2", true, /\.tsx$/)
+  // );
 
   return (
     <Chapter
       title="Les désastres nucléaire"
-      sections={components}
+      sections={components2}
       intro="L'énergie nucléaire, malgré ses avantages, est souvent perçue comme trop
         dangereuse pour être utilisée sereinement, en raison des incidents
         passés. Cette perception de risque a profondément marqué les esprits.
@@ -79,14 +103,10 @@ const Chapter2 = () => {
 };
 
 const Chapter3 = () => {
-  const components: React.ReactNode[] = getComponents(
-    require.context("./chap3", true, /\.tsx?$/)
-  );
-
   return (
     <Chapter
       title="L'inscription du nucléaire dans une démarche respectueuse de l'environnement"
-      sections={components}
+      sections={components3}
     />
   );
 };
