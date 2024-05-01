@@ -64,6 +64,9 @@ function getComponents(requireContext: {
   return result;
 }
 
+const components0: React.ReactNode[] = getComponents(
+  require.context("./chap0", true, /\.tsx$/)
+);
 const components1: React.ReactNode[] = getComponents(
   require.context("./chap1", true, /\.tsx$/)
 );
@@ -74,10 +77,18 @@ const components3: React.ReactNode[] = getComponents(
   require.context("./chap3", true, /\.tsx$/)
 );
 
+const Chapter0 = () => {
+  return (
+    <Chapter
+      title="Histoire et découvertes scientifiques"
+      sections={components0}
+    />
+  );
+};
 const Chapter1 = () => {
   return (
     <Chapter
-      title="Découverte d'une source d'énergie prometteuse"
+      title="De la radiothérapie à la médecine nucléaire"
       sections={components1}
     />
   );
@@ -89,16 +100,19 @@ const Chapter2 = () => {
   // );
 
   return (
-    <Chapter
-      title="Les désastres nucléaire"
-      sections={components2}
-      intro="L'énergie nucléaire, malgré ses avantages, est souvent perçue comme trop
-        dangereuse pour être utilisée sereinement, en raison des incidents
-        passés. Cette perception de risque a profondément marqué les esprits.
+    <>
+      <div className="spacing"></div>
+      <Chapter
+        title="Les désastres nucléaires et leurs conséquences"
+        sections={components2}
+        intro="L'énergie nucléaire, malgré ses avantages, est souvent perçue comme trop
+      dangereuse pour être utilisée sereinement, en raison des incidents
+      passés. Cette perception de risque a profondément marqué les esprits.
         Les accidents nucléaires majeurs comme nous le verrons dans cette partie
         ont laissé des traces dans la mémoire collective et ont souligné la
         nécessité d'une gestion rigoureuse et prudente de cette technologie."
-    />
+      />
+    </>
   );
 };
 
@@ -111,4 +125,4 @@ const Chapter3 = () => {
   );
 };
 
-export { Chapter1, Chapter2, Chapter3 };
+export { Chapter0, Chapter1, Chapter2, Chapter3 };

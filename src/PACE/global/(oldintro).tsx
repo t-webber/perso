@@ -3,7 +3,7 @@ import React from "react";
 const Introdution = () => {
   return (
     <div className="chapter-container">
-      <span className="h2">Introduction</span>
+      <h2>Introduction</h2>
       <p>
         Depuis le début du XX<sup>e</sup> siècle, l'humanité a traversé une
         période de découvertes scientifiques et technologiques qui ont

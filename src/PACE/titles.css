@@ -1,56 +1,68 @@
-#toc > ul > ul {
+.toc-wrapper {
+  display: flex;
+}
+
+
+#toc>ul>ul {
   counter-reset: section;
 }
 
-#toc > ul > ul > li {
+#toc>ul>ul>li {
   counter-increment: section;
 }
 
-#toc > ul > ul > li::before {
+#toc>ul>ul>li::before {
   content: counter(section, upper-roman) ".\0000a0\0000a0";
 }
 
-#toc > ul > ul > ul {
+#toc>ul>ul>ul {
   counter-reset: subsection;
 }
 
-#toc > ul > ul > ul > li {
+#toc>ul>ul>ul>li {
   counter-increment: subsection;
 }
 
-#toc > ul > ul > ul > li::before {
-  content: counter(section, upper-roman) ".\0000a0"counter(subsection) ".\0000a0\0000a0";
+#toc>ul>ul>ul>li::before,
+#toc>ul>ul>ul>p::before {
+  content: counter(section, upper-roman) ".\0000a0" counter(subsection) ".\0000a0\0000a0";
 }
 
-#toc > ul > ul > ul > ul {
+#toc>ul>ul>ul>ul {
   counter-reset: subsubsection;
 }
 
-#toc > ul > ul > ul > ul > li {
+#toc>ul>ul>ul>ul>li {
   counter-increment: subsubsection;
 }
 
-#toc > ul > ul > ul > ul > li::before {
-  content: counter(section, upper-roman) ".\0000a0"counter(subsection) ".\0000a0"counter(
-      subsubsection
-    )
-    ".\0000a0\0000a0";
+#toc>ul>ul>ul>ul>li::before {
+  content: counter(section, upper-roman) ".\0000a0" counter(subsection) ".\0000a0" counter(subsubsection) ".\0000a0\0000a0";
 }
 
-#toc > ul > ul > li {
-  font-size: x-large;
-  font-weight: 600;
-}
-ul > ul > ul > li {
+.toc-wrapper>div>ul>ul>* {
   font-size: large;
   font-weight: 600;
+  margin-top: 5px;
 }
-ul > ul > ul > ul > li {
+
+.toc-wrapper>div>ul>ul>ul>* {
+  font-size: medium;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.toc-wrapper>div>ul>ul>ul>ul>* {
   font-weight: 500;
+  margin: 0px;
 }
-ul > ul > ul > ul > ul > li {
+
+.toc-wrapper>div>ul>ul>ul>ul>ul>* {
   font-weight: 300;
+  margin: 0px;
 }
+
+
 
 /* h1,
 .h1 {
@@ -65,17 +77,18 @@ h1 {
   text-align: center;
   color: white;
   text-transform: uppercase;
-  font-family: "Raleway", cursive;
+  /* font-family: "Raleway", cursive; */
   border-top: 3px solid black;
   border-bottom: 3px solid black;
   font-weight: 100;
   position: relative;
   background: linear-gradient(to right, #ddd, black, #ddd);
   padding: 20px;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: 2px;
   line-height: 1.5;
 }
+
 h1::before {
   content: "";
   position: absolute;
@@ -96,12 +109,16 @@ h2,
   font-weight: 700;
   padding: 50px;
   margin: 10px;
-  margin-top: 100px;
   margin-bottom: 50px;
   border: 4px solid gray;
   display: block;
   letter-spacing: 1px;
   transition: 0.5s;
+}
+
+.spacing {
+  clear: both;
+  padding-top: 120px;
 }
 
 h2:hover,
@@ -117,6 +134,7 @@ h3,
   font-size: 28px;
   font-weight: 600;
   text-align: center;
+  /* margin-top: 80px; */
 
   clear: both;
 
@@ -167,20 +185,21 @@ h5::before,
 .h5::before {
   content: "🔶\0000a0";
 }
+
 h5::after,
 .h5::after {
   content: "\0000a0🔶";
 }
 
-#toc {
+.toc-wrapper {
   font-size: large;
 }
 
-#toc li {
+.toc-wrapper li {
   padding: 2px;
 }
 
-#toc a:hover {
+.toc-wrapper a:hover {
   text-decoration: underline;
 }
 
@@ -192,24 +211,44 @@ h1 {
   counter-reset: h2counter;
   text-align: center;
 }
-h2 {
+
+.numbered {
   counter-reset: h3counter;
 }
+
 h3 {
   counter-reset: h4counter;
 }
 
-h2:before {
-  content: counter(h2counter) ".\0000a0\0000a0";
+.numbered:before {
+  content: counter(h2counter, upper-roman) ".\0000a0\0000a0";
   counter-increment: h2counter;
 }
+
 h3:before {
-  content: counter(h2counter) "." counter(h3counter) ".\0000a0\0000a0";
+  content: counter(h2counter, upper-roman) "." counter(h3counter) ".\0000a0\0000a0";
   counter-increment: h3counter;
 }
 
 h4:before {
-  content: counter(h2counter) "." counter(h3counter) "." counter(h4counter)
-    ".\0000a0\0000a0";
+  content: counter(h2counter, upper-roman) "." counter(h3counter) "." counter(h4counter) ".\0000a0\0000a0";
   counter-increment: h4counter;
+}
+
+.change-page {
+  page-break-before: always;
+}
+
+@page {
+  size: A4;
+}
+
+body {
+  font-size: 12pt;
+  line-height: 1.5;
+}
+
+body {
+  background-color: #fff;
+  color: #000;
 }

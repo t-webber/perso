@@ -1,0 +1,2638 @@
+<!DOCTYPE html>
+<!-- saved from url=(0026)http://localhost:5000/pace -->
+<html lang="en">
+  <link
+    type="text/css"
+    id="dark-mode"
+    rel="stylesheet"
+    href="chrome-extension://nlgphodeccebbcnkgmokeegopgpnjfkc/data/content_script/general/dark_1.css"
+  /><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="icon" href="http://localhost:5000/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="PACE Tom Webber 2024" />
+    <link rel="apple-touch-icon" href="http://localhost:5000/logo.svg" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:5000/manifest.json" />
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Nucléaire et Radioactivité</title>
+    <script
+      defer=""
+      src="./Nucléaire et Radioactivité_files/bundle.js.download"
+    ></script>
+    <style>
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9ib2R5LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7RUFFRSxVQUFVO0VBQ1YsU0FBUztBQUNYOztBQUVBO0VBQ0UsY0FBYztBQUNoQjs7QUFFQTtFQUNFLGdCQUFnQjtBQUNsQiIsInNvdXJjZXNDb250ZW50IjpbImh0bWwsXHJcbmJvZHkge1xyXG4gIHBhZGRpbmc6IDA7XHJcbiAgbWFyZ2luOiAwO1xyXG59XHJcblxyXG5hIHtcclxuICBjb2xvcjogaW5oZXJpdDtcclxufVxyXG5cclxubGkge1xyXG4gIGxpc3Qtc3R5bGU6IG5vbmU7XHJcbn1cclxuIl0sInNvdXJjZVJvb3QiOiIifQ== */
+    </style>
+    <style>
+      .box-floated {
+        margin: 10px;
+        max-width: 40%;
+      }
+
+      .floatingtextbox {
+        border-radius: 10px;
+        background: hsl(219, 66%, 67%);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        margin: 10px;
+        position: relative;
+        page-break-inside: avoid;
+      }
+
+      .floatingtextbox .title {
+        text-align: center;
+        position: absolute;
+        top: -20px;
+        left: 10px;
+        border-radius: 4px;
+        padding: 3px 10px;
+        margin: 3px;
+      }
+
+      .floatingicon {
+        position: absolute;
+        right: -20px;
+        top: -25px;
+        font-size: 35px;
+        font-size: 40px;
+        /* background: fill; */
+        /* border-radius: "30px"; */
+      }
+
+      .floatingtextbox .children {
+        text-align: justify;
+        padding: 20px;
+        margin-top: 10px;
+      }
+
+      .notebox {
+        margin: 20px 4px;
+        float: left;
+        width: calc(100%-16px);
+        border: 3px solid black;
+        position: relative;
+        display: block;
+        border-radius: 3px;
+      }
+
+      .notebox .title {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: black;
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+        border-radius: 3px;
+        width: 40%;
+        top: -15px;
+      }
+
+      .notebox .children {
+        padding: 20px;
+        text-align: justify;
+      }
+
+      .imageboxwrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
+        max-width: 30%;
+        margin: 10px;
+        padding: 15px;
+        transition: 1s;
+        page-break-inside: avoid;
+      }
+
+      .imageboxwrapper:hover {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        background-color: #eee;
+      }
+
+      .imagetitle {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      .imageboxwrapper img {
+        max-width: 100%;
+        margin: 20px 0 5px 0;
+      }
+
+      .imagesourcetext {
+        padding: 0;
+        margin: 0;
+        margin-top: 10px;
+        max-width: 100%;
+      }
+
+      .imagesourceleft {
+        text-align: left;
+      }
+      .imagesourceright {
+        text-align: right;
+      }
+
+      .imagesourcetext::before {
+        content: "";
+      }
+
+      /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9QQUNFL2NvbXBvbmVudHMvYm94ZXMuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBWTtFQUNaLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSxtQkFBbUI7RUFDbkIsOEJBQThCO0VBQzlCLHdDQUF3QztFQUN4QyxZQUFZO0VBQ1osa0JBQWtCO0VBQ2xCLHdCQUF3QjtBQUMxQjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixrQkFBa0I7RUFDbEIsVUFBVTtFQUNWLFVBQVU7RUFDVixrQkFBa0I7RUFDbEIsaUJBQWlCO0VBQ2pCLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixZQUFZO0VBQ1osVUFBVTtFQUNWLGVBQWU7RUFDZixlQUFlO0VBQ2Ysc0JBQXNCO0VBQ3RCLDJCQUEyQjtBQUM3Qjs7QUFFQTtFQUNFLG1CQUFtQjtFQUNuQixhQUFhO0VBQ2IsZ0JBQWdCO0FBQ2xCOztBQUVBO0VBQ0UsZ0JBQWdCO0VBQ2hCLFdBQVc7RUFDWCxzQkFBc0I7RUFDdEIsdUJBQXVCO0VBQ3ZCLGtCQUFrQjtFQUNsQixjQUFjO0VBQ2Qsa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLE9BQU87RUFDUCxRQUFRO0VBQ1IsaUJBQWlCO0VBQ2pCLGtCQUFrQjtFQUNsQix1QkFBdUI7RUFDdkIsWUFBWTtFQUNaLHlCQUF5QjtFQUN6QixrQkFBa0I7RUFDbEIsa0JBQWtCO0VBQ2xCLFVBQVU7RUFDVixVQUFVO0FBQ1o7O0FBRUE7RUFDRSxhQUFhO0VBQ2IsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0UsYUFBYTtFQUNiLHNCQUFzQjtFQUN0QixtQkFBbUI7RUFDbkIsdUJBQXVCO0VBQ3ZCLHVCQUF1QjtFQUN2QixjQUFjO0VBQ2QsWUFBWTtFQUNaLGFBQWE7RUFDYixjQUFjO0VBQ2Qsd0JBQXdCO0FBQzFCOztBQUVBO0VBQ0Usd0NBQXdDO0VBQ3hDLHNCQUFzQjtBQUN4Qjs7QUFFQTtFQUNFLFNBQVM7RUFDVCxVQUFVO0VBQ1Ysa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsZUFBZTtFQUNmLG9CQUFvQjtBQUN0Qjs7QUFFQTtFQUNFLFVBQVU7RUFDVixTQUFTO0VBQ1QsZ0JBQWdCO0VBQ2hCLGVBQWU7QUFDakI7O0FBRUE7RUFDRSxnQkFBZ0I7QUFDbEI7QUFDQTtFQUNFLGlCQUFpQjtBQUNuQjs7QUFFQTtFQUNFLFdBQVc7QUFDYiIsInNvdXJjZXNDb250ZW50IjpbIi5ib3gtZmxvYXRlZCB7XHJcbiAgbWFyZ2luOiAxMHB4O1xyXG4gIG1heC13aWR0aDogNDAlO1xyXG59XHJcblxyXG4uZmxvYXRpbmd0ZXh0Ym94IHtcclxuICBib3JkZXItcmFkaXVzOiAxMHB4O1xyXG4gIGJhY2tncm91bmQ6IGhzbCgyMTksIDY2JSwgNjclKTtcclxuICBib3gtc2hhZG93OiAwIDRweCA2cHggcmdiYSgwLCAwLCAwLCAwLjIpO1xyXG4gIG1hcmdpbjogMTBweDtcclxuICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgcGFnZS1icmVhay1pbnNpZGU6IGF2b2lkO1xyXG59XHJcblxyXG4uZmxvYXRpbmd0ZXh0Ym94IC50aXRsZSB7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICB0b3A6IC0yMHB4O1xyXG4gIGxlZnQ6IDEwcHg7XHJcbiAgYm9yZGVyLXJhZGl1czogNHB4O1xyXG4gIHBhZGRpbmc6IDNweCAxMHB4O1xyXG4gIG1hcmdpbjogM3B4O1xyXG59XHJcblxyXG4uZmxvYXRpbmdpY29uIHtcclxuICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgcmlnaHQ6IC0yMHB4O1xyXG4gIHRvcDogLTI1cHg7XHJcbiAgZm9udC1zaXplOiAzNXB4O1xyXG4gIGZvbnQtc2l6ZTogNDBweDtcclxuICAvKiBiYWNrZ3JvdW5kOiBmaWxsOyAqL1xyXG4gIC8qIGJvcmRlci1yYWRpdXM6IFwiMzBweFwiOyAqL1xyXG59XHJcblxyXG4uZmxvYXRpbmd0ZXh0Ym94IC5jaGlsZHJlbiB7XHJcbiAgdGV4dC1hbGlnbjoganVzdGlmeTtcclxuICBwYWRkaW5nOiAyMHB4O1xyXG4gIG1hcmdpbi10b3A6IDEwcHg7XHJcbn1cclxuXHJcbi5ub3RlYm94IHtcclxuICBtYXJnaW46IDIwcHggNHB4O1xyXG4gIGZsb2F0OiBsZWZ0O1xyXG4gIHdpZHRoOiBjYWxjKDEwMCUtMTZweCk7XHJcbiAgYm9yZGVyOiAzcHggc29saWQgYmxhY2s7XHJcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gIGRpc3BsYXk6IGJsb2NrO1xyXG4gIGJvcmRlci1yYWRpdXM6IDNweDtcclxufVxyXG5cclxuLm5vdGVib3ggLnRpdGxlIHtcclxuICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgbGVmdDogMDtcclxuICByaWdodDogMDtcclxuICBtYXJnaW4tbGVmdDogYXV0bztcclxuICBtYXJnaW4tcmlnaHQ6IGF1dG87XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XHJcbiAgY29sb3I6IHdoaXRlO1xyXG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIGJvcmRlci1yYWRpdXM6IDNweDtcclxuICB3aWR0aDogNDAlO1xyXG4gIHRvcDogLTE1cHg7XHJcbn1cclxuXHJcbi5ub3RlYm94IC5jaGlsZHJlbiB7XHJcbiAgcGFkZGluZzogMjBweDtcclxuICB0ZXh0LWFsaWduOiBqdXN0aWZ5O1xyXG59XHJcblxyXG4uaW1hZ2Vib3h3cmFwcGVyIHtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICBib3JkZXI6IDFweCBzb2xpZCBibGFjaztcclxuICBtYXgtd2lkdGg6IDMwJTtcclxuICBtYXJnaW46IDEwcHg7XHJcbiAgcGFkZGluZzogMTVweDtcclxuICB0cmFuc2l0aW9uOiAxcztcclxuICBwYWdlLWJyZWFrLWluc2lkZTogYXZvaWQ7XHJcbn1cclxuXHJcbi5pbWFnZWJveHdyYXBwZXI6aG92ZXIge1xyXG4gIGJveC1zaGFkb3c6IDAgNHB4IDZweCByZ2JhKDAsIDAsIDAsIDAuMik7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogI2VlZTtcclxufVxyXG5cclxuLmltYWdldGl0bGUge1xyXG4gIG1hcmdpbjogMDtcclxuICBwYWRkaW5nOiAwO1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG5cclxuLmltYWdlYm94d3JhcHBlciBpbWcge1xyXG4gIG1heC13aWR0aDogMTAwJTtcclxuICBtYXJnaW46IDIwcHggMCA1cHggMDtcclxufVxyXG5cclxuLmltYWdlc291cmNldGV4dCB7XHJcbiAgcGFkZGluZzogMDtcclxuICBtYXJnaW46IDA7XHJcbiAgbWFyZ2luLXRvcDogMTBweDtcclxuICBtYXgtd2lkdGg6IDEwMCU7XHJcbn1cclxuXHJcbi5pbWFnZXNvdXJjZWxlZnQge1xyXG4gIHRleHQtYWxpZ246IGxlZnQ7XHJcbn1cclxuLmltYWdlc291cmNlcmlnaHQge1xyXG4gIHRleHQtYWxpZ246IHJpZ2h0O1xyXG59XHJcblxyXG4uaW1hZ2Vzb3VyY2V0ZXh0OjpiZWZvcmUge1xyXG4gIGNvbnRlbnQ6IFwiXCI7XHJcbn1cclxuIl0sInNvdXJjZVJvb3QiOiIifQ== */
+    </style>
+    <style>
+      .biblio {
+        counter-reset: cnt;
+      }
+
+      .biblio li::before {
+        content: "[" counter(cnt) "].\0000a0\0000a0";
+        counter-increment: cnt;
+      }
+
+      .biblio li {
+        /* font-size: large; */
+        /* font-weight: 400; */
+        margin-top: 12px;
+      }
+
+      .bib-bold {
+        font-weight: 500;
+      }
+
+      /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9QQUNFL2dsb2JhbC9iaWJsaW8uY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsNENBQTRDO0VBQzVDLHNCQUFzQjtBQUN4Qjs7QUFFQTtFQUNFLHNCQUFzQjtFQUN0QixzQkFBc0I7RUFDdEIsZ0JBQWdCO0FBQ2xCOztBQUVBO0VBQ0UsZ0JBQWdCO0FBQ2xCIiwic291cmNlc0NvbnRlbnQiOlsiLmJpYmxpbyB7XHJcbiAgY291bnRlci1yZXNldDogY250O1xyXG59XHJcblxyXG4uYmlibGlvIGxpOjpiZWZvcmUge1xyXG4gIGNvbnRlbnQ6IFwiW1wiIGNvdW50ZXIoY250KSBcIl0uXFwwMDAwYTBcXDAwMDBhMFwiO1xyXG4gIGNvdW50ZXItaW5jcmVtZW50OiBjbnQ7XHJcbn1cclxuXHJcbi5iaWJsaW8gbGkge1xyXG4gIC8qIGZvbnQtc2l6ZTogbGFyZ2U7ICovXHJcbiAgLyogZm9udC13ZWlnaHQ6IDQwMDsgKi9cclxuICBtYXJnaW4tdG9wOiAxMnB4O1xyXG59XHJcblxyXG4uYmliLWJvbGQge1xyXG4gIGZvbnQtd2VpZ2h0OiA1MDA7XHJcbn1cclxuIl0sInNvdXJjZVJvb3QiOiIifQ== */
+    </style>
+    <style>
+      @import url(https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap);
+    </style>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+          "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+          "Helvetica Neue", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        margin: 0;
+        padding: 0;
+        font-size: 18px;
+        /* margin: 1cm; */
+      }
+
+      code {
+        font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+          monospace;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .container {
+        width: 100%;
+        background-color: antiquewhite;
+      }
+
+      p {
+        text-align: justify;
+      }
+
+      p::before {
+        content: "\0000a0\0000a0\0000a0";
+      }
+
+      .blockquote {
+        border-left: 3px solid black;
+        margin: 10px;
+        padding: 10px;
+        font-style: italic;
+      }
+
+      .blockquote::before {
+        content: "\00AB\0000a0";
+      }
+      .blockquote::after {
+        content: "\0000a0\00BB";
+      }
+
+      .PACE {
+        width: 1070px;
+        /* background-color: rgb(99, 99, 99); */
+        /* background-color: white; */
+        /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+      }
+
+      /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9QQUNFL1BBQ0UuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBO0VBQ0U7O2NBRVk7RUFDWixtQ0FBbUM7RUFDbkMsa0NBQWtDO0VBQ2xDLFNBQVM7RUFDVCxVQUFVO0VBQ1YsZUFBZTtFQUNmLGlCQUFpQjtBQUNuQjs7QUFFQTtFQUNFO2FBQ1c7QUFDYjs7QUFFQTtFQUNFLHFCQUFxQjtBQUN2Qjs7QUFFQTtFQUNFLFdBQVc7RUFDWCw4QkFBOEI7QUFDaEM7O0FBRUE7RUFDRSxtQkFBbUI7QUFDckI7O0FBRUE7RUFDRSxnQ0FBZ0M7QUFDbEM7O0FBRUE7RUFDRSw0QkFBNEI7RUFDNUIsWUFBWTtFQUNaLGFBQWE7RUFDYixrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSx1QkFBdUI7QUFDekI7QUFDQTtFQUNFLHVCQUF1QjtBQUN6Qjs7QUFFQTtFQUNFLGFBQWE7RUFDYix1Q0FBdUM7RUFDdkMsNkJBQTZCO0VBQzdCOzs7d0JBR3NCO0FBQ3hCIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCB1cmwoXCJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2NzczI/ZmFtaWx5PVJhbGV3YXk6d2dodEAxMDAmZGlzcGxheT1zd2FwXCIpO1xyXG5cclxuYm9keSB7XHJcbiAgZm9udC1mYW1pbHk6IC1hcHBsZS1zeXN0ZW0sIEJsaW5rTWFjU3lzdGVtRm9udCwgXCJTZWdvZSBVSVwiLCBcIlJvYm90b1wiLCBcIk94eWdlblwiLFxyXG4gICAgXCJVYnVudHVcIiwgXCJDYW50YXJlbGxcIiwgXCJGaXJhIFNhbnNcIiwgXCJEcm9pZCBTYW5zXCIsIFwiSGVsdmV0aWNhIE5ldWVcIixcclxuICAgIHNhbnMtc2VyaWY7XHJcbiAgLXdlYmtpdC1mb250LXNtb290aGluZzogYW50aWFsaWFzZWQ7XHJcbiAgLW1vei1vc3gtZm9udC1zbW9vdGhpbmc6IGdyYXlzY2FsZTtcclxuICBtYXJnaW46IDA7XHJcbiAgcGFkZGluZzogMDtcclxuICBmb250LXNpemU6IDE4cHg7XHJcbiAgLyogbWFyZ2luOiAxY207ICovXHJcbn1cclxuXHJcbmNvZGUge1xyXG4gIGZvbnQtZmFtaWx5OiBzb3VyY2UtY29kZS1wcm8sIE1lbmxvLCBNb25hY28sIENvbnNvbGFzLCBcIkNvdXJpZXIgTmV3XCIsXHJcbiAgICBtb25vc3BhY2U7XHJcbn1cclxuXHJcbmEge1xyXG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcclxufVxyXG5cclxuLmNvbnRhaW5lciB7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogYW50aXF1ZXdoaXRlO1xyXG59XHJcblxyXG5wIHtcclxuICB0ZXh0LWFsaWduOiBqdXN0aWZ5O1xyXG59XHJcblxyXG5wOjpiZWZvcmUge1xyXG4gIGNvbnRlbnQ6IFwiXFwwMDAwYTBcXDAwMDBhMFxcMDAwMGEwXCI7XHJcbn1cclxuXHJcbi5ibG9ja3F1b3RlIHtcclxuICBib3JkZXItbGVmdDogM3B4IHNvbGlkIGJsYWNrO1xyXG4gIG1hcmdpbjogMTBweDtcclxuICBwYWRkaW5nOiAxMHB4O1xyXG4gIGZvbnQtc3R5bGU6IGl0YWxpYztcclxufVxyXG5cclxuLmJsb2NrcXVvdGU6OmJlZm9yZSB7XHJcbiAgY29udGVudDogXCJcXDAwQUJcXDAwMDBhMFwiO1xyXG59XHJcbi5ibG9ja3F1b3RlOjphZnRlciB7XHJcbiAgY29udGVudDogXCJcXDAwMDBhMFxcMDBCQlwiO1xyXG59XHJcblxyXG4uUEFDRSB7XHJcbiAgd2lkdGg6IDEwNzBweDtcclxuICAvKiBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoOTksIDk5LCA5OSk7ICovXHJcbiAgLyogYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7ICovXHJcbiAgLyogZGlzcGxheTogZmxleDtcclxuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7ICovXHJcbn1cclxuIl0sInNvdXJjZVJvb3QiOiIifQ== */
+    </style>
+    <style>
+      #toc > ul > ul {
+        counter-reset: section;
+      }
+
+      #toc > ul > ul > li {
+        counter-increment: section;
+      }
+
+      #toc > ul > ul > li::before {
+        content: counter(section, upper-roman) ".\0000a0\0000a0";
+      }
+
+      #toc > ul > ul > ul {
+        counter-reset: subsection;
+      }
+
+      #toc > ul > ul > ul > li {
+        counter-increment: subsection;
+      }
+
+      #toc > ul > ul > ul > li::before {
+        content: counter(section, upper-roman) ".\0000a0"counter(subsection) ".\0000a0\0000a0";
+      }
+
+      #toc > ul > ul > ul > ul {
+        counter-reset: subsubsection;
+      }
+
+      #toc > ul > ul > ul > ul > li {
+        counter-increment: subsubsection;
+      }
+
+      #toc > ul > ul > ul > ul > li::before {
+        content: counter(section, upper-roman) ".\0000a0"counter(subsection) ".\0000a0"counter(
+            subsubsection
+          )
+          ".\0000a0\0000a0";
+      }
+
+      #toc > ul > ul > li {
+        font-size: x-large;
+        font-weight: 600;
+        margin-top: 10px;
+      }
+      ul > ul > ul > li {
+        font-size: large;
+        font-weight: 600;
+        margin-top: 10px;
+      }
+      ul > ul > ul > ul > li {
+        font-weight: 500;
+        margin: 0px;
+      }
+      ul > ul > ul > ul > ul > li {
+        font-weight: 300;
+        margin: 0px;
+      }
+
+      /* h1,
+.h1 {
+  font-size: xx-large;
+  clear: both;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+} */
+
+      h1 {
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+        /* font-family: "Raleway", cursive; */
+        border-top: 3px solid black;
+        border-bottom: 3px solid black;
+        font-weight: 100;
+        position: relative;
+        background: linear-gradient(to right, #ddd, black, #ddd);
+        padding: 20px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        line-height: 1.5;
+      }
+      h1::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: -50px;
+        width: 600px;
+        margin-left: -300px;
+        margin-top: -220px;
+        height: 600px;
+        background: linear-gradient(0, 0, closest-side, #444, black);
+        z-index: 1;
+      }
+
+      h2,
+      .h2 {
+        font-size: 40px;
+        clear: both;
+        font-weight: 700;
+        padding: 50px;
+        margin: 10px;
+        margin-bottom: 50px;
+        border: 4px solid gray;
+        display: block;
+        letter-spacing: 1px;
+        transition: 0.5s;
+      }
+
+      .spacing {
+        clear: both;
+        padding-top: 120px;
+      }
+
+      h2:hover,
+      .h2:hover {
+        background-color: #eee;
+        /* color: white; */
+        border: 4px solid #000;
+        box-shadow: 0 0 8px #000;
+      }
+
+      h3,
+      .h3 {
+        font-size: 28px;
+        font-weight: 600;
+        text-align: center;
+        /* margin-top: 80px; */
+
+        clear: both;
+
+        text-transform: uppercase;
+        /* font-size: 26px; */
+        letter-spacing: 1px;
+
+        border-top: 3px solid gray;
+        padding-bottom: 3px;
+        border-bottom: 3px solid gray;
+
+        /* display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 16px 0;
+  grid-gap: 22px; */
+        transition: 1s;
+      }
+
+      h3:hover,
+      .h3:hover {
+        background-color: #f3f3f3;
+        /* color: white; */
+        /* border: 3px solid #000; */
+        box-shadow: 0 0 4px #000;
+      }
+
+      h3 sup,
+      h3 sub {
+        text-transform: lowercase;
+      }
+
+      h4,
+      .h4 {
+        font-size: large;
+        font-weight: 600;
+      }
+
+      h5,
+      .h5 {
+        font-size: medium;
+        text-align: center;
+        color: #ff6723;
+        font-weight: 500;
+        position: relative;
+      }
+
+      h5::before,
+      .h5::before {
+        content: "🔶\0000a0";
+      }
+      h5::after,
+      .h5::after {
+        content: "\0000a0🔶";
+      }
+
+      #toc {
+        font-size: large;
+      }
+
+      #toc li {
+        padding: 2px;
+      }
+
+      #toc a:hover {
+        text-decoration: underline;
+      }
+
+      body {
+        counter-reset: h2counter;
+      }
+
+      h1 {
+        counter-reset: h2counter;
+        text-align: center;
+      }
+      h2 {
+        counter-reset: h3counter;
+      }
+      h3 {
+        counter-reset: h4counter;
+      }
+
+      h2:before {
+        content: counter(h2counter) ".\0000a0\0000a0";
+        counter-increment: h2counter;
+      }
+      h3:before {
+        content: counter(h2counter) "." counter(h3counter) ".\0000a0\0000a0";
+        counter-increment: h3counter;
+      }
+
+      h4:before {
+        content: counter(h2counter) "." counter(h3counter) "."
+          counter(h4counter) ".\0000a0\0000a0";
+        counter-increment: h4counter;
+      }
+
+      .change-page {
+        page-break-before: always;
+      }
+
+      @page {
+        size: A4; /* or Letter, Legal, etc. */
+        margin: 1in;
+      }
+
+      body {
+        font-size: 12pt;
+        line-height: 1.5;
+        /* padding: 1cm; */
+      }
+
+      body {
+        background-color: #fff; /* White background */
+        color: #000; /* Black text */
+      }
+
+      /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9QQUNFL3RpdGxlcy5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxzQkFBc0I7QUFDeEI7O0FBRUE7RUFDRSwwQkFBMEI7QUFDNUI7O0FBRUE7RUFDRSx3REFBd0Q7QUFDMUQ7O0FBRUE7RUFDRSx5QkFBeUI7QUFDM0I7O0FBRUE7RUFDRSw2QkFBNkI7QUFDL0I7O0FBRUE7RUFDRSxzRkFBc0Y7QUFDeEY7O0FBRUE7RUFDRSw0QkFBNEI7QUFDOUI7O0FBRUE7RUFDRSxnQ0FBZ0M7QUFDbEM7O0FBRUE7RUFDRTs7O3FCQUdtQjtBQUNyQjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixnQkFBZ0I7RUFDaEIsZ0JBQWdCO0FBQ2xCO0FBQ0E7RUFDRSxnQkFBZ0I7RUFDaEIsZ0JBQWdCO0VBQ2hCLGdCQUFnQjtBQUNsQjtBQUNBO0VBQ0UsZ0JBQWdCO0VBQ2hCLFdBQVc7QUFDYjtBQUNBO0VBQ0UsZ0JBQWdCO0VBQ2hCLFdBQVc7QUFDYjs7QUFFQTs7Ozs7OztHQU9HOztBQUVIO0VBQ0Usa0JBQWtCO0VBQ2xCLFlBQVk7RUFDWix5QkFBeUI7RUFDekIscUNBQXFDO0VBQ3JDLDJCQUEyQjtFQUMzQiw4QkFBOEI7RUFDOUIsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtFQUNsQix3REFBd0Q7RUFDeEQsYUFBYTtFQUNiLGdCQUFnQjtFQUNoQixtQkFBbUI7RUFDbkIsZ0JBQWdCO0FBQ2xCO0FBQ0E7RUFDRSxXQUFXO0VBQ1gsa0JBQWtCO0VBQ2xCLFNBQVM7RUFDVCxVQUFVO0VBQ1YsWUFBWTtFQUNaLG1CQUFtQjtFQUNuQixrQkFBa0I7RUFDbEIsYUFBYTtFQUNiLDREQUE0RDtFQUM1RCxVQUFVO0FBQ1o7O0FBRUE7O0VBRUUsZUFBZTtFQUNmLFdBQVc7RUFDWCxnQkFBZ0I7RUFDaEIsYUFBYTtFQUNiLFlBQVk7RUFDWixtQkFBbUI7RUFDbkIsc0JBQXNCO0VBQ3RCLGNBQWM7RUFDZCxtQkFBbUI7RUFDbkIsZ0JBQWdCO0FBQ2xCOztBQUVBO0VBQ0UsV0FBVztFQUNYLGtCQUFrQjtBQUNwQjs7QUFFQTs7RUFFRSxzQkFBc0I7RUFDdEIsa0JBQWtCO0VBQ2xCLHNCQUFzQjtFQUN0Qix3QkFBd0I7QUFDMUI7O0FBRUE7O0VBRUUsZUFBZTtFQUNmLGdCQUFnQjtFQUNoQixrQkFBa0I7RUFDbEIsc0JBQXNCOztFQUV0QixXQUFXOztFQUVYLHlCQUF5QjtFQUN6QixxQkFBcUI7RUFDckIsbUJBQW1COztFQUVuQiwwQkFBMEI7RUFDMUIsbUJBQW1CO0VBQ25CLDZCQUE2Qjs7RUFFN0I7OzttQkFHaUI7RUFDakIsY0FBYztBQUNoQjs7QUFFQTs7RUFFRSx5QkFBeUI7RUFDekIsa0JBQWtCO0VBQ2xCLDRCQUE0QjtFQUM1Qix3QkFBd0I7QUFDMUI7O0FBRUE7O0VBRUUseUJBQXlCO0FBQzNCOztBQUVBOztFQUVFLGdCQUFnQjtFQUNoQixnQkFBZ0I7QUFDbEI7O0FBRUE7O0VBRUUsaUJBQWlCO0VBQ2pCLGtCQUFrQjtFQUNsQixjQUFjO0VBQ2QsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtBQUNwQjs7QUFFQTs7RUFFRSxvQkFBb0I7QUFDdEI7QUFDQTs7RUFFRSxvQkFBb0I7QUFDdEI7O0FBRUE7RUFDRSxnQkFBZ0I7QUFDbEI7O0FBRUE7RUFDRSxZQUFZO0FBQ2Q7O0FBRUE7RUFDRSwwQkFBMEI7QUFDNUI7O0FBRUE7RUFDRSx3QkFBd0I7QUFDMUI7O0FBRUE7RUFDRSx3QkFBd0I7RUFDeEIsa0JBQWtCO0FBQ3BCO0FBQ0E7RUFDRSx3QkFBd0I7QUFDMUI7QUFDQTtFQUNFLHdCQUF3QjtBQUMxQjs7QUFFQTtFQUNFLDZDQUE2QztFQUM3Qyw0QkFBNEI7QUFDOUI7QUFDQTtFQUNFLG9FQUFvRTtFQUNwRSw0QkFBNEI7QUFDOUI7O0FBRUE7RUFDRTtxQkFDbUI7RUFDbkIsNEJBQTRCO0FBQzlCOztBQUVBO0VBQ0UseUJBQXlCO0FBQzNCOztBQUVBO0VBQ0UsUUFBUSxFQUFFLDJCQUEyQjtFQUNyQyxzQ0FBc0M7QUFDeEM7O0FBRUE7RUFDRSxlQUFlO0VBQ2YsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLHNCQUFzQixFQUFFLHFCQUFxQjtFQUM3QyxXQUFXLEVBQUUsZUFBZTtBQUM5QiIsInNvdXJjZXNDb250ZW50IjpbIiN0b2MgPiB1bCA+IHVsIHtcclxuICBjb3VudGVyLXJlc2V0OiBzZWN0aW9uO1xyXG59XHJcblxyXG4jdG9jID4gdWwgPiB1bCA+IGxpIHtcclxuICBjb3VudGVyLWluY3JlbWVudDogc2VjdGlvbjtcclxufVxyXG5cclxuI3RvYyA+IHVsID4gdWwgPiBsaTo6YmVmb3JlIHtcclxuICBjb250ZW50OiBjb3VudGVyKHNlY3Rpb24sIHVwcGVyLXJvbWFuKSBcIi5cXDAwMDBhMFxcMDAwMGEwXCI7XHJcbn1cclxuXHJcbiN0b2MgPiB1bCA+IHVsID4gdWwge1xyXG4gIGNvdW50ZXItcmVzZXQ6IHN1YnNlY3Rpb247XHJcbn1cclxuXHJcbiN0b2MgPiB1bCA+IHVsID4gdWwgPiBsaSB7XHJcbiAgY291bnRlci1pbmNyZW1lbnQ6IHN1YnNlY3Rpb247XHJcbn1cclxuXHJcbiN0b2MgPiB1bCA+IHVsID4gdWwgPiBsaTo6YmVmb3JlIHtcclxuICBjb250ZW50OiBjb3VudGVyKHNlY3Rpb24sIHVwcGVyLXJvbWFuKSBcIi5cXDAwMDBhMFwiY291bnRlcihzdWJzZWN0aW9uKSBcIi5cXDAwMDBhMFxcMDAwMGEwXCI7XHJcbn1cclxuXHJcbiN0b2MgPiB1bCA+IHVsID4gdWwgPiB1bCB7XHJcbiAgY291bnRlci1yZXNldDogc3Vic3Vic2VjdGlvbjtcclxufVxyXG5cclxuI3RvYyA+IHVsID4gdWwgPiB1bCA+IHVsID4gbGkge1xyXG4gIGNvdW50ZXItaW5jcmVtZW50OiBzdWJzdWJzZWN0aW9uO1xyXG59XHJcblxyXG4jdG9jID4gdWwgPiB1bCA+IHVsID4gdWwgPiBsaTo6YmVmb3JlIHtcclxuICBjb250ZW50OiBjb3VudGVyKHNlY3Rpb24sIHVwcGVyLXJvbWFuKSBcIi5cXDAwMDBhMFwiY291bnRlcihzdWJzZWN0aW9uKSBcIi5cXDAwMDBhMFwiY291bnRlcihcclxuICAgICAgc3Vic3Vic2VjdGlvblxyXG4gICAgKVxyXG4gICAgXCIuXFwwMDAwYTBcXDAwMDBhMFwiO1xyXG59XHJcblxyXG4jdG9jID4gdWwgPiB1bCA+IGxpIHtcclxuICBmb250LXNpemU6IHgtbGFyZ2U7XHJcbiAgZm9udC13ZWlnaHQ6IDYwMDtcclxuICBtYXJnaW4tdG9wOiAxMHB4O1xyXG59XHJcbnVsID4gdWwgPiB1bCA+IGxpIHtcclxuICBmb250LXNpemU6IGxhcmdlO1xyXG4gIGZvbnQtd2VpZ2h0OiA2MDA7XHJcbiAgbWFyZ2luLXRvcDogMTBweDtcclxufVxyXG51bCA+IHVsID4gdWwgPiB1bCA+IGxpIHtcclxuICBmb250LXdlaWdodDogNTAwO1xyXG4gIG1hcmdpbjogMHB4O1xyXG59XHJcbnVsID4gdWwgPiB1bCA+IHVsID4gdWwgPiBsaSB7XHJcbiAgZm9udC13ZWlnaHQ6IDMwMDtcclxuICBtYXJnaW46IDBweDtcclxufVxyXG5cclxuLyogaDEsXHJcbi5oMSB7XHJcbiAgZm9udC1zaXplOiB4eC1sYXJnZTtcclxuICBjbGVhcjogYm90aDtcclxuICBmb250LXdlaWdodDogNzAwO1xyXG4gIGxldHRlci1zcGFjaW5nOiAxcHg7XHJcbiAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcclxufSAqL1xyXG5cclxuaDEge1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICBjb2xvcjogd2hpdGU7XHJcbiAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcclxuICAvKiBmb250LWZhbWlseTogXCJSYWxld2F5XCIsIGN1cnNpdmU7ICovXHJcbiAgYm9yZGVyLXRvcDogM3B4IHNvbGlkIGJsYWNrO1xyXG4gIGJvcmRlci1ib3R0b206IDNweCBzb2xpZCBibGFjaztcclxuICBmb250LXdlaWdodDogMTAwO1xyXG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQodG8gcmlnaHQsICNkZGQsIGJsYWNrLCAjZGRkKTtcclxuICBwYWRkaW5nOiAyMHB4O1xyXG4gIGZvbnQtd2VpZ2h0OiA3MDA7XHJcbiAgbGV0dGVyLXNwYWNpbmc6IDJweDtcclxuICBsaW5lLWhlaWdodDogMS41O1xyXG59XHJcbmgxOjpiZWZvcmUge1xyXG4gIGNvbnRlbnQ6IFwiXCI7XHJcbiAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gIGxlZnQ6IDUwJTtcclxuICB0b3A6IC01MHB4O1xyXG4gIHdpZHRoOiA2MDBweDtcclxuICBtYXJnaW4tbGVmdDogLTMwMHB4O1xyXG4gIG1hcmdpbi10b3A6IC0yMjBweDtcclxuICBoZWlnaHQ6IDYwMHB4O1xyXG4gIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCgwLCAwLCBjbG9zZXN0LXNpZGUsICM0NDQsIGJsYWNrKTtcclxuICB6LWluZGV4OiAxO1xyXG59XHJcblxyXG5oMixcclxuLmgyIHtcclxuICBmb250LXNpemU6IDQwcHg7XHJcbiAgY2xlYXI6IGJvdGg7XHJcbiAgZm9udC13ZWlnaHQ6IDcwMDtcclxuICBwYWRkaW5nOiA1MHB4O1xyXG4gIG1hcmdpbjogMTBweDtcclxuICBtYXJnaW4tYm90dG9tOiA1MHB4O1xyXG4gIGJvcmRlcjogNHB4IHNvbGlkIGdyYXk7XHJcbiAgZGlzcGxheTogYmxvY2s7XHJcbiAgbGV0dGVyLXNwYWNpbmc6IDFweDtcclxuICB0cmFuc2l0aW9uOiAwLjVzO1xyXG59XHJcblxyXG4uc3BhY2luZyB7XHJcbiAgY2xlYXI6IGJvdGg7XHJcbiAgcGFkZGluZy10b3A6IDEyMHB4O1xyXG59XHJcblxyXG5oMjpob3ZlcixcclxuLmgyOmhvdmVyIHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZWVlO1xyXG4gIC8qIGNvbG9yOiB3aGl0ZTsgKi9cclxuICBib3JkZXI6IDRweCBzb2xpZCAjMDAwO1xyXG4gIGJveC1zaGFkb3c6IDAgMCA4cHggIzAwMDtcclxufVxyXG5cclxuaDMsXHJcbi5oMyB7XHJcbiAgZm9udC1zaXplOiAyOHB4O1xyXG4gIGZvbnQtd2VpZ2h0OiA2MDA7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIC8qIG1hcmdpbi10b3A6IDgwcHg7ICovXHJcblxyXG4gIGNsZWFyOiBib3RoO1xyXG5cclxuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xyXG4gIC8qIGZvbnQtc2l6ZTogMjZweDsgKi9cclxuICBsZXR0ZXItc3BhY2luZzogMXB4O1xyXG5cclxuICBib3JkZXItdG9wOiAzcHggc29saWQgZ3JheTtcclxuICBwYWRkaW5nLWJvdHRvbTogM3B4O1xyXG4gIGJvcmRlci1ib3R0b206IDNweCBzb2xpZCBncmF5O1xyXG5cclxuICAvKiBkaXNwbGF5OiBncmlkO1xyXG4gIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMWZyIGF1dG8gMWZyO1xyXG4gIGdyaWQtdGVtcGxhdGUtcm93czogMTZweCAwO1xyXG4gIGdyaWQtZ2FwOiAyMnB4OyAqL1xyXG4gIHRyYW5zaXRpb246IDFzO1xyXG59XHJcblxyXG5oMzpob3ZlcixcclxuLmgzOmhvdmVyIHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjNmM2YzO1xyXG4gIC8qIGNvbG9yOiB3aGl0ZTsgKi9cclxuICAvKiBib3JkZXI6IDNweCBzb2xpZCAjMDAwOyAqL1xyXG4gIGJveC1zaGFkb3c6IDAgMCA0cHggIzAwMDtcclxufVxyXG5cclxuaDMgc3VwLFxyXG5oMyBzdWIge1xyXG4gIHRleHQtdHJhbnNmb3JtOiBsb3dlcmNhc2U7XHJcbn1cclxuXHJcbmg0LFxyXG4uaDQge1xyXG4gIGZvbnQtc2l6ZTogbGFyZ2U7XHJcbiAgZm9udC13ZWlnaHQ6IDYwMDtcclxufVxyXG5cclxuaDUsXHJcbi5oNSB7XHJcbiAgZm9udC1zaXplOiBtZWRpdW07XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIGNvbG9yOiAjZmY2NzIzO1xyXG4gIGZvbnQtd2VpZ2h0OiA1MDA7XHJcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG59XHJcblxyXG5oNTo6YmVmb3JlLFxyXG4uaDU6OmJlZm9yZSB7XHJcbiAgY29udGVudDogXCLwn5S2XFwwMDAwYTBcIjtcclxufVxyXG5oNTo6YWZ0ZXIsXHJcbi5oNTo6YWZ0ZXIge1xyXG4gIGNvbnRlbnQ6IFwiXFwwMDAwYTDwn5S2XCI7XHJcbn1cclxuXHJcbiN0b2Mge1xyXG4gIGZvbnQtc2l6ZTogbGFyZ2U7XHJcbn1cclxuXHJcbiN0b2MgbGkge1xyXG4gIHBhZGRpbmc6IDJweDtcclxufVxyXG5cclxuI3RvYyBhOmhvdmVyIHtcclxuICB0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcclxufVxyXG5cclxuYm9keSB7XHJcbiAgY291bnRlci1yZXNldDogaDJjb3VudGVyO1xyXG59XHJcblxyXG5oMSB7XHJcbiAgY291bnRlci1yZXNldDogaDJjb3VudGVyO1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG5oMiB7XHJcbiAgY291bnRlci1yZXNldDogaDNjb3VudGVyO1xyXG59XHJcbmgzIHtcclxuICBjb3VudGVyLXJlc2V0OiBoNGNvdW50ZXI7XHJcbn1cclxuXHJcbmgyOmJlZm9yZSB7XHJcbiAgY29udGVudDogY291bnRlcihoMmNvdW50ZXIpIFwiLlxcMDAwMGEwXFwwMDAwYTBcIjtcclxuICBjb3VudGVyLWluY3JlbWVudDogaDJjb3VudGVyO1xyXG59XHJcbmgzOmJlZm9yZSB7XHJcbiAgY29udGVudDogY291bnRlcihoMmNvdW50ZXIpIFwiLlwiIGNvdW50ZXIoaDNjb3VudGVyKSBcIi5cXDAwMDBhMFxcMDAwMGEwXCI7XHJcbiAgY291bnRlci1pbmNyZW1lbnQ6IGgzY291bnRlcjtcclxufVxyXG5cclxuaDQ6YmVmb3JlIHtcclxuICBjb250ZW50OiBjb3VudGVyKGgyY291bnRlcikgXCIuXCIgY291bnRlcihoM2NvdW50ZXIpIFwiLlwiIGNvdW50ZXIoaDRjb3VudGVyKVxyXG4gICAgXCIuXFwwMDAwYTBcXDAwMDBhMFwiO1xyXG4gIGNvdW50ZXItaW5jcmVtZW50OiBoNGNvdW50ZXI7XHJcbn1cclxuXHJcbi5jaGFuZ2UtcGFnZSB7XHJcbiAgcGFnZS1icmVhay1iZWZvcmU6IGFsd2F5cztcclxufVxyXG5cclxuQHBhZ2Uge1xyXG4gIHNpemU6IEE0OyAvKiBvciBMZXR0ZXIsIExlZ2FsLCBldGMuICovXHJcbiAgLyogbWFyZ2luOiAxaW47IG9yIGFueSBkZXNpcmVkIHZhbHVlICovXHJcbn1cclxuXHJcbmJvZHkge1xyXG4gIGZvbnQtc2l6ZTogMTJwdDtcclxuICBsaW5lLWhlaWdodDogMS41O1xyXG4gIC8qIHBhZGRpbmc6IDFjbTsgKi9cclxufVxyXG5cclxuYm9keSB7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjsgLyogV2hpdGUgYmFja2dyb3VuZCAqL1xyXG4gIGNvbG9yOiAjMDAwOyAvKiBCbGFjayB0ZXh0ICovXHJcbn1cclxuIl0sInNvdXJjZVJvb3QiOiIifQ== */
+    </style>
+    <style>
+      #cv-corner-buttons {
+        position: relative;
+        top: calc(var(--inner-page-margin) - var(--text-size) * 1.5);
+        z-index: 2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      #cv-corner-buttons button {
+        background-color: var(--bar-hover);
+        color: var(--text-color);
+        position: absolute;
+        top: 0;
+        font-weight: calc(var(--text-weight));
+        font-size: calc(var(--text-size));
+        padding: calc(var(--text-size) / 2);
+        margin: 0;
+        border: none;
+        border-radius: calc(var(--text-size) * 8);
+        cursor: pointer;
+        transition: 0.5s;
+      }
+
+      #cv-corner-buttons button:hover {
+        background-color: var(--text-color);
+        color: var(--inner-page-color);
+      }
+
+      #cv-corner-buttons button:first-child {
+        left: calc(var(--inner-page-margin) / 6);
+      }
+
+      #cv-corner-buttons button:last-child {
+        right: calc(var(--inner-page-margin) / 6);
+      }
+
+      /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9DVi9zdHlsZXMvYnV0dG9uLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGtCQUFrQjtFQUNsQiw0REFBNEQ7RUFDNUQsVUFBVTtFQUNWLGFBQWE7RUFDYiw4QkFBOEI7RUFDOUIsbUJBQW1CO0VBQ25CLFNBQVM7RUFDVCxVQUFVO0FBQ1o7O0FBRUE7RUFDRSxrQ0FBa0M7RUFDbEMsd0JBQXdCO0VBQ3hCLGtCQUFrQjtFQUNsQixNQUFNO0VBQ04scUNBQXFDO0VBQ3JDLGlDQUFpQztFQUNqQyxtQ0FBbUM7RUFDbkMsU0FBUztFQUNULFlBQVk7RUFDWix5Q0FBeUM7RUFDekMsZUFBZTtFQUNmLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLG1DQUFtQztFQUNuQyw4QkFBOEI7QUFDaEM7O0FBRUE7RUFDRSx3Q0FBd0M7QUFDMUM7O0FBRUE7RUFDRSx5Q0FBeUM7QUFDM0MiLCJzb3VyY2VzQ29udGVudCI6WyIjY3YtY29ybmVyLWJ1dHRvbnMge1xyXG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICB0b3A6IGNhbGModmFyKC0taW5uZXItcGFnZS1tYXJnaW4pIC0gdmFyKC0tdGV4dC1zaXplKSAqIDEuNSk7XHJcbiAgei1pbmRleDogMjtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcclxuICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gIG1hcmdpbjogMDtcclxuICBwYWRkaW5nOiAwO1xyXG59XHJcblxyXG4jY3YtY29ybmVyLWJ1dHRvbnMgYnV0dG9uIHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1iYXItaG92ZXIpO1xyXG4gIGNvbG9yOiB2YXIoLS10ZXh0LWNvbG9yKTtcclxuICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgdG9wOiAwO1xyXG4gIGZvbnQtd2VpZ2h0OiBjYWxjKHZhcigtLXRleHQtd2VpZ2h0KSk7XHJcbiAgZm9udC1zaXplOiBjYWxjKHZhcigtLXRleHQtc2l6ZSkpO1xyXG4gIHBhZGRpbmc6IGNhbGModmFyKC0tdGV4dC1zaXplKSAvIDIpO1xyXG4gIG1hcmdpbjogMDtcclxuICBib3JkZXI6IG5vbmU7XHJcbiAgYm9yZGVyLXJhZGl1czogY2FsYyh2YXIoLS10ZXh0LXNpemUpICogOCk7XHJcbiAgY3Vyc29yOiBwb2ludGVyO1xyXG4gIHRyYW5zaXRpb246IDAuNXM7XHJcbn1cclxuXHJcbiNjdi1jb3JuZXItYnV0dG9ucyBidXR0b246aG92ZXIge1xyXG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLXRleHQtY29sb3IpO1xyXG4gIGNvbG9yOiB2YXIoLS1pbm5lci1wYWdlLWNvbG9yKTtcclxufVxyXG5cclxuI2N2LWNvcm5lci1idXR0b25zIGJ1dHRvbjpmaXJzdC1jaGlsZCB7XHJcbiAgbGVmdDogY2FsYyh2YXIoLS1pbm5lci1wYWdlLW1hcmdpbikgLyA2KTtcclxufVxyXG5cclxuI2N2LWNvcm5lci1idXR0b25zIGJ1dHRvbjpsYXN0LWNoaWxkIHtcclxuICByaWdodDogY2FsYyh2YXIoLS1pbm5lci1wYWdlLW1hcmdpbikgLyA2KTtcclxufVxyXG4iXSwic291cmNlUm9vdCI6IiJ9 */
+    </style>
+    <style>
+      #cv-contact-form {
+        display: flex;
+        margin: min(5vh, 5vw);
+        padding: min(5vh, 5vw);
+        margin-top: min(10vh, 10vw);
+        background-color: var(--inner-page-transparent);
+        flex-direction: column;
+      }
+
+      #cv-contact-form h3 {
+        padding: 0;
+        margin: 0;
+        font-weight: calc(var(--text-weight) * 2);
+      }
+
+      #cv-contact-form form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #cv-contact-form form label {
+        display: flex;
+        flex-direction: column;
+        /* font-size: larger; */
+        margin: 10px;
+      }
+
+      #cv-contact-form form input,
+      #cv-contact-form form textarea,
+      #cv-contact-form form button,
+      #cv-contact-form form label span {
+        font-weight: calc(var(--text-weight) * 2);
+        font-size: larger;
+      }
+
+      #cv-contact-form form label div {
+        font-size: larger;
+        font-weight: bolder;
+      }
+
+      #cv-contact-form button {
+        font-weight: calc(var(--text-weight) * 1.5);
+        padding: 10px 0;
+        margin: 10px;
+        margin-top: 20px;
+        color: var(--text-color);
+        background-color: var(--body-color);
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: 0.5s;
+        border: 2px solid var(--bar-hover);
+      }
+
+      #cv-contact-form button:hover {
+        background-color: var(--bar-hover);
+        color: var(--text-color);
+      }
+
+      #cv-contact-form form textarea,
+      #cv-contact-form form input {
+        margin: 10px;
+        background-color: var(--body-color);
+        color: var(--text-color);
+        font-weight: calc(var(--text-weight) * 1.3);
+        border: none;
+        text-align: left;
+        padding: 10px;
+      }
+
+      #cv-contact-form form textarea {
+        resize: none;
+      }
+
+      /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9DVi9zdHlsZXMvY29udGFjdC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxhQUFhO0VBQ2IscUJBQXFCO0VBQ3JCLHNCQUFzQjtFQUN0QiwyQkFBMkI7RUFDM0IsK0NBQStDO0VBQy9DLHNCQUFzQjtBQUN4Qjs7QUFFQTtFQUNFLFVBQVU7RUFDVixTQUFTO0VBQ1QseUNBQXlDO0FBQzNDOztBQUVBO0VBQ0UsYUFBYTtFQUNiLHNCQUFzQjtBQUN4Qjs7QUFFQTtFQUNFLGFBQWE7RUFDYixzQkFBc0I7RUFDdEIsdUJBQXVCO0VBQ3ZCLFlBQVk7QUFDZDs7QUFFQTs7OztFQUlFLHlDQUF5QztFQUN6QyxpQkFBaUI7QUFDbkI7O0FBRUE7RUFDRSxpQkFBaUI7RUFDakIsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0UsMkNBQTJDO0VBQzNDLGVBQWU7RUFDZixZQUFZO0VBQ1osZ0JBQWdCO0VBQ2hCLHdCQUF3QjtFQUN4QixtQ0FBbUM7RUFDbkMsWUFBWTtFQUNaLGtCQUFrQjtFQUNsQixlQUFlO0VBQ2YsZ0JBQWdCO0VBQ2hCLGtDQUFrQztBQUNwQzs7QUFFQTtFQUNFLGtDQUFrQztFQUNsQyx3QkFBd0I7QUFDMUI7O0FBRUE7O0VBRUUsWUFBWTtFQUNaLG1DQUFtQztFQUNuQyx3QkFBd0I7RUFDeEIsMkNBQTJDO0VBQzNDLFlBQVk7RUFDWixnQkFBZ0I7RUFDaEIsYUFBYTtBQUNmOztBQUVBO0VBQ0UsWUFBWTtBQUNkIiwic291cmNlc0NvbnRlbnQiOlsiI2N2LWNvbnRhY3QtZm9ybSB7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBtYXJnaW46IG1pbig1dmgsIDV2dyk7XHJcbiAgcGFkZGluZzogbWluKDV2aCwgNXZ3KTtcclxuICBtYXJnaW4tdG9wOiBtaW4oMTB2aCwgMTB2dyk7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0taW5uZXItcGFnZS10cmFuc3BhcmVudCk7XHJcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxufVxyXG5cclxuI2N2LWNvbnRhY3QtZm9ybSBoMyB7XHJcbiAgcGFkZGluZzogMDtcclxuICBtYXJnaW46IDA7XHJcbiAgZm9udC13ZWlnaHQ6IGNhbGModmFyKC0tdGV4dC13ZWlnaHQpICogMik7XHJcbn1cclxuXHJcbiNjdi1jb250YWN0LWZvcm0gZm9ybSB7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG59XHJcblxyXG4jY3YtY29udGFjdC1mb3JtIGZvcm0gbGFiZWwge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICAvKiBmb250LXNpemU6IGxhcmdlcjsgKi9cclxuICBtYXJnaW46IDEwcHg7XHJcbn1cclxuXHJcbiNjdi1jb250YWN0LWZvcm0gZm9ybSBpbnB1dCxcclxuI2N2LWNvbnRhY3QtZm9ybSBmb3JtIHRleHRhcmVhLFxyXG4jY3YtY29udGFjdC1mb3JtIGZvcm0gYnV0dG9uLFxyXG4jY3YtY29udGFjdC1mb3JtIGZvcm0gbGFiZWwgc3BhbiB7XHJcbiAgZm9udC13ZWlnaHQ6IGNhbGModmFyKC0tdGV4dC13ZWlnaHQpICogMik7XHJcbiAgZm9udC1zaXplOiBsYXJnZXI7XHJcbn1cclxuXHJcbiNjdi1jb250YWN0LWZvcm0gZm9ybSBsYWJlbCBkaXYge1xyXG4gIGZvbnQtc2l6ZTogbGFyZ2VyO1xyXG4gIGZvbnQtd2VpZ2h0OiBib2xkZXI7XHJcbn1cclxuXHJcbiNjdi1jb250YWN0LWZvcm0gYnV0dG9uIHtcclxuICBmb250LXdlaWdodDogY2FsYyh2YXIoLS10ZXh0LXdlaWdodCkgKiAxLjUpO1xyXG4gIHBhZGRpbmc6IDEwcHggMDtcclxuICBtYXJnaW46IDEwcHg7XHJcbiAgbWFyZ2luLXRvcDogMjBweDtcclxuICBjb2xvcjogdmFyKC0tdGV4dC1jb2xvcik7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tYm9keS1jb2xvcik7XHJcbiAgYm9yZGVyOiBub25lO1xyXG4gIGJvcmRlci1yYWRpdXM6IDRweDtcclxuICBjdXJzb3I6IHBvaW50ZXI7XHJcbiAgdHJhbnNpdGlvbjogMC41cztcclxuICBib3JkZXI6IDJweCBzb2xpZCB2YXIoLS1iYXItaG92ZXIpO1xyXG59XHJcblxyXG4jY3YtY29udGFjdC1mb3JtIGJ1dHRvbjpob3ZlciB7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tYmFyLWhvdmVyKTtcclxuICBjb2xvcjogdmFyKC0tdGV4dC1jb2xvcik7XHJcbn1cclxuXHJcbiNjdi1jb250YWN0LWZvcm0gZm9ybSB0ZXh0YXJlYSxcclxuI2N2LWNvbnRhY3QtZm9ybSBmb3JtIGlucHV0IHtcclxuICBtYXJnaW46IDEwcHg7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tYm9keS1jb2xvcik7XHJcbiAgY29sb3I6IHZhcigtLXRleHQtY29sb3IpO1xyXG4gIGZvbnQtd2VpZ2h0OiBjYWxjKHZhcigtLXRleHQtd2VpZ2h0KSAqIDEuMyk7XHJcbiAgYm9yZGVyOiBub25lO1xyXG4gIHRleHQtYWxpZ246IGxlZnQ7XHJcbiAgcGFkZGluZzogMTBweDtcclxufVxyXG5cclxuI2N2LWNvbnRhY3QtZm9ybSBmb3JtIHRleHRhcmVhIHtcclxuICByZXNpemU6IG5vbmU7XHJcbn1cclxuIl0sInNvdXJjZVJvb3QiOiIifQ== */
+    </style>
+    <style>
+      .cv-component {
+        /* background-color: var(--body-color); */
+        /* background-image: url("../images/bkg.cv-jpg"); */
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),
+          url(http://localhost:5000/static/media/bkg.581b9bf4315b99eee428.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 101vh;
+        scrollbar-width: 0;
+      }
+
+      .cv-component::-webkit-scrollbar {
+        display: none;
+      }
+
+      #cv-inner-page::-webkit-scrollbar {
+        width: 20px;
+      }
+
+      #cv-inner-page::-webkit-scrollbar-track {
+        background: var(--body-dark);
+      }
+
+      #cv-inner-page::-webkit-scrollbar-thumb {
+        background: var(--bar-light);
+      }
+
+      #cv-inner-page::-webkit-scrollbar-thumb:hover {
+        background: var(--bar-hover);
+      }
+
+      #cv-inner-page {
+        scrollbar-color: var(--bar-dark) var(--bar-light); /* bad browser */
+        /* scrollbar-width: ; */
+        background-color: var(--inner-page-color);
+        width: calc(100vw - 2 * var(--inner-page-margin));
+        height: calc(100vh - 2 * var(--inner-page-margin));
+        max-width: 1000px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        overflow: auto;
+      }
+
+      .cv-container {
+        margin: var(--inner-page-margin);
+        /* margin: 50px; */
+        background: transparent;
+      }
+
+      .cv-component {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+      }
+
+      /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9DVi9zdHlsZXMvY29udGFpbmVyLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHlDQUF5QztFQUN6QyxtREFBbUQ7RUFDbkQ7MkNBQzJCO0VBQzNCLHNCQUFzQjtFQUN0QiwyQkFBMkI7RUFDM0IsNEJBQTRCO0VBQzVCLGFBQWE7RUFDYixrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxhQUFhO0FBQ2Y7O0FBRUE7RUFDRSxXQUFXO0FBQ2I7O0FBRUE7RUFDRSw0QkFBNEI7QUFDOUI7O0FBRUE7RUFDRSw0QkFBNEI7QUFDOUI7O0FBRUE7RUFDRSw0QkFBNEI7QUFDOUI7O0FBRUE7RUFDRSxpREFBaUQsRUFBRSxnQkFBZ0I7RUFDbkUsdUJBQXVCO0VBQ3ZCLHlDQUF5QztFQUN6QyxpREFBaUQ7RUFDakQsa0RBQWtEO0VBQ2xELGlCQUFpQjtFQUNqQixrQkFBa0I7RUFDbEIsUUFBUTtFQUNSLFNBQVM7RUFDVCxnQ0FBZ0M7RUFDaEMsY0FBYztBQUNoQjs7QUFFQTtFQUNFLGdDQUFnQztFQUNoQyxrQkFBa0I7RUFDbEIsdUJBQXVCO0FBQ3pCOztBQUVBO0VBQ0UsU0FBUztFQUNULFVBQVU7RUFDVixhQUFhO0FBQ2YiLCJzb3VyY2VzQ29udGVudCI6WyIuY3YtY29tcG9uZW50IHtcclxuICAvKiBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1ib2R5LWNvbG9yKTsgKi9cclxuICAvKiBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoXCIuLi9pbWFnZXMvYmtnLmN2LWpwZ1wiKTsgKi9cclxuICBiYWNrZ3JvdW5kLWltYWdlOiBsaW5lYXItZ3JhZGllbnQocmdiYSgwLCAwLCAwLCAwKSwgcmdiYSgwLCAwLCAwLCAxKSksXHJcbiAgICB1cmwoXCIvcHVibGljL0NWL2JrZy5qcGdcIik7XHJcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxuICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XHJcbiAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcclxuICBoZWlnaHQ6IDEwMXZoO1xyXG4gIHNjcm9sbGJhci13aWR0aDogMDtcclxufVxyXG5cclxuLmN2LWNvbXBvbmVudDo6LXdlYmtpdC1zY3JvbGxiYXIge1xyXG4gIGRpc3BsYXk6IG5vbmU7XHJcbn1cclxuXHJcbiNjdi1pbm5lci1wYWdlOjotd2Via2l0LXNjcm9sbGJhciB7XHJcbiAgd2lkdGg6IDIwcHg7XHJcbn1cclxuXHJcbiNjdi1pbm5lci1wYWdlOjotd2Via2l0LXNjcm9sbGJhci10cmFjayB7XHJcbiAgYmFja2dyb3VuZDogdmFyKC0tYm9keS1kYXJrKTtcclxufVxyXG5cclxuI2N2LWlubmVyLXBhZ2U6Oi13ZWJraXQtc2Nyb2xsYmFyLXRodW1iIHtcclxuICBiYWNrZ3JvdW5kOiB2YXIoLS1iYXItbGlnaHQpO1xyXG59XHJcblxyXG4jY3YtaW5uZXItcGFnZTo6LXdlYmtpdC1zY3JvbGxiYXItdGh1bWI6aG92ZXIge1xyXG4gIGJhY2tncm91bmQ6IHZhcigtLWJhci1ob3Zlcik7XHJcbn1cclxuXHJcbiNjdi1pbm5lci1wYWdlIHtcclxuICBzY3JvbGxiYXItY29sb3I6IHZhcigtLWJhci1kYXJrKSB2YXIoLS1iYXItbGlnaHQpOyAvKiBiYWQgYnJvd3NlciAqL1xyXG4gIC8qIHNjcm9sbGJhci13aWR0aDogOyAqL1xyXG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWlubmVyLXBhZ2UtY29sb3IpO1xyXG4gIHdpZHRoOiBjYWxjKDEwMHZ3IC0gMiAqIHZhcigtLWlubmVyLXBhZ2UtbWFyZ2luKSk7XHJcbiAgaGVpZ2h0OiBjYWxjKDEwMHZoIC0gMiAqIHZhcigtLWlubmVyLXBhZ2UtbWFyZ2luKSk7XHJcbiAgbWF4LXdpZHRoOiAxMDAwcHg7XHJcbiAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gIHRvcDogNTAlO1xyXG4gIGxlZnQ6IDUwJTtcclxuICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcclxuICBvdmVyZmxvdzogYXV0bztcclxufVxyXG5cclxuLmN2LWNvbnRhaW5lciB7XHJcbiAgbWFyZ2luOiB2YXIoLS1pbm5lci1wYWdlLW1hcmdpbik7XHJcbiAgLyogbWFyZ2luOiA1MHB4OyAqL1xyXG4gIGJhY2tncm91bmQ6IHRyYW5zcGFyZW50O1xyXG59XHJcblxyXG4uY3YtY29tcG9uZW50IHtcclxuICBtYXJnaW46IDA7XHJcbiAgcGFkZGluZzogMDtcclxuICBoZWlnaHQ6IDEwMHZoO1xyXG59XHJcbiJdLCJzb3VyY2VSb290IjoiIn0= */
+    </style>
+    <style>
+      .cv-component a {
+        color: var(--text-color);
+        text-decoration: none;
+      }
+
+      .cv-component a:hover {
+        color: var(--bar-hover);
+        text-decoration: underline;
+      }
+
+      .cv-component * {
+        color: var(--text-color);
+        font-family: var(--font-family);
+        font-weight: var(--text-weight);
+        font-size: var(--text-size);
+      }
+
+      .cv-component * {
+        text-align: center;
+        /* text-justify: inter-word; */
+      }
+
+      /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9DVi9zdHlsZXMvZ2xvYmFsLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHdCQUF3QjtFQUN4QixxQkFBcUI7QUFDdkI7O0FBRUE7RUFDRSx1QkFBdUI7RUFDdkIsMEJBQTBCO0FBQzVCOztBQUVBO0VBQ0Usd0JBQXdCO0VBQ3hCLCtCQUErQjtFQUMvQiwrQkFBK0I7RUFDL0IsMkJBQTJCO0FBQzdCOztBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLDhCQUE4QjtBQUNoQyIsInNvdXJjZXNDb250ZW50IjpbIi5jdi1jb21wb25lbnQgYSB7XHJcbiAgY29sb3I6IHZhcigtLXRleHQtY29sb3IpO1xyXG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcclxufVxyXG5cclxuLmN2LWNvbXBvbmVudCBhOmhvdmVyIHtcclxuICBjb2xvcjogdmFyKC0tYmFyLWhvdmVyKTtcclxuICB0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcclxufVxyXG5cclxuLmN2LWNvbXBvbmVudCAqIHtcclxuICBjb2xvcjogdmFyKC0tdGV4dC1jb2xvcik7XHJcbiAgZm9udC1mYW1pbHk6IHZhcigtLWZvbnQtZmFtaWx5KTtcclxuICBmb250LXdlaWdodDogdmFyKC0tdGV4dC13ZWlnaHQpO1xyXG4gIGZvbnQtc2l6ZTogdmFyKC0tdGV4dC1zaXplKTtcclxufVxyXG5cclxuLmN2LWNvbXBvbmVudCAqIHtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgLyogdGV4dC1qdXN0aWZ5OiBpbnRlci13b3JkOyAqL1xyXG59XHJcbiJdLCJzb3VyY2VSb290IjoiIn0= */
+    </style>
+    <style>
+      .cv-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+
+      .cv-links * {
+        padding: 0;
+        margin: 0;
+        margin-bottom: 20px;
+      }
+
+      .cv-link-button {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* background-color: var(--body-color); */
+        height: 40px;
+        width: 40px;
+        padding: 0;
+        margin: 0;
+        border-radius: 10000px;
+        font-size: calc(var(--text-size) / 2);
+        border: 10px solid var(--inner-page-color);
+      }
+
+      .cv-link-button a {
+        align-self: center;
+      }
+
+      .cv-link-button:hover {
+        border: 10px solid var(--bar-dark);
+        background-color: var(--bar-dark);
+      }
+
+      .cv-descr {
+        color: white;
+        font-weight: bolder;
+        padding: 10px;
+      }
+
+      .cv-link-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9DVi9zdHlsZXMvaGVhZGVyLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGFBQWE7RUFDYixtQkFBbUI7RUFDbkIsNkJBQTZCO0FBQy9COztBQUVBO0VBQ0UsVUFBVTtFQUNWLFNBQVM7RUFDVCxtQkFBbUI7QUFDckI7O0FBRUE7RUFDRSxhQUFhO0VBQ2Isc0JBQXNCO0VBQ3RCLHVCQUF1QjtFQUN2QixtQkFBbUI7RUFDbkIseUNBQXlDO0VBQ3pDLFlBQVk7RUFDWixXQUFXO0VBQ1gsVUFBVTtFQUNWLFNBQVM7RUFDVCxzQkFBc0I7RUFDdEIscUNBQXFDO0VBQ3JDLDBDQUEwQztBQUM1Qzs7QUFFQTtFQUNFLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGtDQUFrQztFQUNsQyxpQ0FBaUM7QUFDbkM7O0FBRUE7RUFDRSxZQUFZO0VBQ1osbUJBQW1CO0VBQ25CLGFBQWE7QUFDZjs7QUFFQTtFQUNFLGFBQWE7RUFDYixzQkFBc0I7RUFDdEIsbUJBQW1CO0VBQ25CLHVCQUF1QjtBQUN6QiIsInNvdXJjZXNDb250ZW50IjpbIi5jdi1saW5rcyB7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBmbGV4LWRpcmVjdGlvbjogcm93O1xyXG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYXJvdW5kO1xyXG59XHJcblxyXG4uY3YtbGlua3MgKiB7XHJcbiAgcGFkZGluZzogMDtcclxuICBtYXJnaW46IDA7XHJcbiAgbWFyZ2luLWJvdHRvbTogMjBweDtcclxufVxyXG5cclxuLmN2LWxpbmstYnV0dG9uIHtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAvKiBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1ib2R5LWNvbG9yKTsgKi9cclxuICBoZWlnaHQ6IDQwcHg7XHJcbiAgd2lkdGg6IDQwcHg7XHJcbiAgcGFkZGluZzogMDtcclxuICBtYXJnaW46IDA7XHJcbiAgYm9yZGVyLXJhZGl1czogMTAwMDBweDtcclxuICBmb250LXNpemU6IGNhbGModmFyKC0tdGV4dC1zaXplKSAvIDIpO1xyXG4gIGJvcmRlcjogMTBweCBzb2xpZCB2YXIoLS1pbm5lci1wYWdlLWNvbG9yKTtcclxufVxyXG5cclxuLmN2LWxpbmstYnV0dG9uIGEge1xyXG4gIGFsaWduLXNlbGY6IGNlbnRlcjtcclxufVxyXG5cclxuLmN2LWxpbmstYnV0dG9uOmhvdmVyIHtcclxuICBib3JkZXI6IDEwcHggc29saWQgdmFyKC0tYmFyLWRhcmspO1xyXG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWJhci1kYXJrKTtcclxufVxyXG5cclxuLmN2LWRlc2NyIHtcclxuICBjb2xvcjogd2hpdGU7XHJcbiAgZm9udC13ZWlnaHQ6IGJvbGRlcjtcclxuICBwYWRkaW5nOiAxMHB4O1xyXG59XHJcblxyXG4uY3YtbGluay1jb250YWluZXIge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG59XHJcbiJdLCJzb3VyY2VSb290IjoiIn0= */
+    </style>
+    <style>
+      @media screen and (min-width: 600px) {
+        .cv-skills {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          width: 100%;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        .cv-skills {
+          flex-direction: column;
+        }
+      }
+
+      .cv-skill {
+        margin: 10px 0;
+        padding: 8px;
+        /* width: 100%; */
+        /* overflow: hidden; */
+        border-radius: 30px;
+        background-color: var(--body-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* font-weight: calc(var(--text-weight)); */
+      }
+
+      .cv-skill:hover {
+        background-color: var(--bar-dark);
+      }
+
+      /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9DVi9zdHlsZXMvc2tpbGxzLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0lBQ0UsYUFBYTtJQUNiLG1CQUFtQjtJQUNuQiw2QkFBNkI7SUFDN0IsV0FBVztFQUNiO0FBQ0Y7QUFDQTtFQUNFO0lBQ0Usc0JBQXNCO0VBQ3hCO0FBQ0Y7O0FBRUE7RUFDRSxjQUFjO0VBQ2QsWUFBWTtFQUNaLGlCQUFpQjtFQUNqQixzQkFBc0I7RUFDdEIsbUJBQW1CO0VBQ25CLG1DQUFtQztFQUNuQyxhQUFhO0VBQ2IsbUJBQW1CO0VBQ25CLHVCQUF1QjtFQUN2QiwyQ0FBMkM7QUFDN0M7O0FBRUE7RUFDRSxpQ0FBaUM7QUFDbkMiLCJzb3VyY2VzQ29udGVudCI6WyJAbWVkaWEgc2NyZWVuIGFuZCAobWluLXdpZHRoOiA2MDBweCkge1xyXG4gIC5jdi1za2lsbHMge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGZsZXgtZGlyZWN0aW9uOiByb3c7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWV2ZW5seTtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gIH1cclxufVxyXG5AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA2MDBweCkge1xyXG4gIC5jdi1za2lsbHMge1xyXG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICB9XHJcbn1cclxuXHJcbi5jdi1za2lsbCB7XHJcbiAgbWFyZ2luOiAxMHB4IDA7XHJcbiAgcGFkZGluZzogOHB4O1xyXG4gIC8qIHdpZHRoOiAxMDAlOyAqL1xyXG4gIC8qIG92ZXJmbG93OiBoaWRkZW47ICovXHJcbiAgYm9yZGVyLXJhZGl1czogMzBweDtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1ib2R5LWNvbG9yKTtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgLyogZm9udC13ZWlnaHQ6IGNhbGModmFyKC0tdGV4dC13ZWlnaHQpKTsgKi9cclxufVxyXG5cclxuLmN2LXNraWxsOmhvdmVyIHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1iYXItZGFyayk7XHJcbn1cclxuIl0sInNvdXJjZVJvb3QiOiIifQ== */
+    </style>
+    <style>
+      .cv-h1 {
+        font-weight: calc(1.5 * var(--text-weight));
+        font-size: calc(3 * var(--text-size));
+        color: var(--title-color);
+        text-align: center;
+        margin: 5vw 5vh;
+      }
+
+      .cv-h2 {
+        font-weight: calc(1.25 * var(--text-weight));
+        font-size: calc(2 * var(--text-size));
+        color: var(--title-color);
+        text-align: center;
+        margin: 0;
+        margin-top: 7vh;
+        margin-bottom: 2vh;
+      }
+
+      .cv-h3 {
+        font-weight: calc(1.125 * var(--text-weight));
+        font-size: calc(1.5 * var(--text-size));
+        color: var(--title-color);
+        text-align: center;
+        margin: 0;
+        margin-top: 4vh;
+        margin-bottom: 0.5vh;
+        width: 100%;
+      }
+
+      .cv-h4 {
+        font-weight: calc(1 * var(--text-weight));
+        font-size: calc(1 * var(--text-size));
+        color: var(--title-color);
+        text-align: center;
+        margin: 0;
+        width: 100%;
+      }
+
+      /* .cv-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+} */
+
+      /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9DVi9zdHlsZXMvdGl0bGVzLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLDJDQUEyQztFQUMzQyxxQ0FBcUM7RUFDckMseUJBQXlCO0VBQ3pCLGtCQUFrQjtFQUNsQixlQUFlO0FBQ2pCOztBQUVBO0VBQ0UsNENBQTRDO0VBQzVDLHFDQUFxQztFQUNyQyx5QkFBeUI7RUFDekIsa0JBQWtCO0VBQ2xCLFNBQVM7RUFDVCxlQUFlO0VBQ2Ysa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsNkNBQTZDO0VBQzdDLHVDQUF1QztFQUN2Qyx5QkFBeUI7RUFDekIsa0JBQWtCO0VBQ2xCLFNBQVM7RUFDVCxlQUFlO0VBQ2Ysb0JBQW9CO0VBQ3BCLFdBQVc7QUFDYjs7QUFFQTtFQUNFLHlDQUF5QztFQUN6QyxxQ0FBcUM7RUFDckMseUJBQXlCO0VBQ3pCLGtCQUFrQjtFQUNsQixTQUFTO0VBQ1QsV0FBVztBQUNiOztBQUVBOzs7O0dBSUciLCJzb3VyY2VzQ29udGVudCI6WyIuY3YtaDEge1xyXG4gIGZvbnQtd2VpZ2h0OiBjYWxjKDEuNSAqIHZhcigtLXRleHQtd2VpZ2h0KSk7XHJcbiAgZm9udC1zaXplOiBjYWxjKDMgKiB2YXIoLS10ZXh0LXNpemUpKTtcclxuICBjb2xvcjogdmFyKC0tdGl0bGUtY29sb3IpO1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICBtYXJnaW46IDV2dyA1dmg7XHJcbn1cclxuXHJcbi5jdi1oMiB7XHJcbiAgZm9udC13ZWlnaHQ6IGNhbGMoMS4yNSAqIHZhcigtLXRleHQtd2VpZ2h0KSk7XHJcbiAgZm9udC1zaXplOiBjYWxjKDIgKiB2YXIoLS10ZXh0LXNpemUpKTtcclxuICBjb2xvcjogdmFyKC0tdGl0bGUtY29sb3IpO1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICBtYXJnaW46IDA7XHJcbiAgbWFyZ2luLXRvcDogN3ZoO1xyXG4gIG1hcmdpbi1ib3R0b206IDJ2aDtcclxufVxyXG5cclxuLmN2LWgzIHtcclxuICBmb250LXdlaWdodDogY2FsYygxLjEyNSAqIHZhcigtLXRleHQtd2VpZ2h0KSk7XHJcbiAgZm9udC1zaXplOiBjYWxjKDEuNSAqIHZhcigtLXRleHQtc2l6ZSkpO1xyXG4gIGNvbG9yOiB2YXIoLS10aXRsZS1jb2xvcik7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIG1hcmdpbjogMDtcclxuICBtYXJnaW4tdG9wOiA0dmg7XHJcbiAgbWFyZ2luLWJvdHRvbTogMC41dmg7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbn1cclxuXHJcbi5jdi1oNCB7XHJcbiAgZm9udC13ZWlnaHQ6IGNhbGMoMSAqIHZhcigtLXRleHQtd2VpZ2h0KSk7XHJcbiAgZm9udC1zaXplOiBjYWxjKDEgKiB2YXIoLS10ZXh0LXNpemUpKTtcclxuICBjb2xvcjogdmFyKC0tdGl0bGUtY29sb3IpO1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICBtYXJnaW46IDA7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbn1cclxuXHJcbi8qIC5jdi1oZWFkZXIge1xyXG4gIHBvc2l0aW9uOiBmaXhlZDtcclxuICB0b3A6IDA7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbn0gKi9cclxuIl0sInNvdXJjZVJvb3QiOiIifQ== */
+    </style>
+    <style>
+      @import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
+    </style>
+    <style>
+      .cv-component {
+        --body-color: #394a5b;
+        --inner-page-color: #26313c;
+        --inner-page-transparent: #486078dd;
+        --bar-dark: #445769;
+        --bar-hover: rgb(95, 121, 146);
+        --bar-light: #b3ceea;
+        --text-color: rgb(179, 206, 234);
+        --font-family: "Roboto", sans-serif;
+        --title-color: #ffffff;
+      }
+
+      @media screen and (min-width: 600px) {
+        .cv-component {
+          --text-weight: 300;
+          --text-size: 16px;
+          --inner-page-margin: min(5vw, 5vh);
+        }
+
+        /* p {
+    text-align: justify;
+    text-justify: inter-word;
+  } */
+      }
+
+      @media screen and (max-width: 600px) {
+        .cv-component {
+          --text-weight: 300;
+          --text-size: 16px;
+          --inner-page-margin: min(5vw, 5vh);
+        }
+
+        #cv-inner-page {
+          margin-top: 3vh;
+          margin-bottom: 3vh;
+        }
+
+        /* p {
+    text-align: left;
+    text-justify: inter-word; 
+  } */
+      }
+
+      /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9DVi9zdHlsZXMvdmFyaWFibGVzLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFFQTtFQUNFLHFCQUFxQjtFQUNyQiwyQkFBMkI7RUFDM0IsbUNBQW1DO0VBQ25DLG1CQUFtQjtFQUNuQiw4QkFBOEI7RUFDOUIsb0JBQW9CO0VBQ3BCLGdDQUFnQztFQUNoQyxtQ0FBbUM7RUFDbkMsc0JBQXNCO0FBQ3hCOztBQUVBO0VBQ0U7SUFDRSxrQkFBa0I7SUFDbEIsaUJBQWlCO0lBQ2pCLGtDQUFrQztFQUNwQzs7RUFFQTs7O0tBR0c7QUFDTDs7QUFFQTtFQUNFO0lBQ0Usa0JBQWtCO0lBQ2xCLGlCQUFpQjtJQUNqQixrQ0FBa0M7RUFDcEM7O0VBRUE7SUFDRSxlQUFlO0lBQ2Ysa0JBQWtCO0VBQ3BCOztFQUVBOzs7S0FHRztBQUNMIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCB1cmwoXCJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2NzczI/ZmFtaWx5PVJvYm90bzppdGFsLHdnaHRAMCwxMDA7MCwzMDA7MCw0MDA7MCw1MDA7MCw3MDA7MCw5MDA7MSwxMDA7MSwzMDA7MSw0MDA7MSw1MDA7MSw3MDA7MSw5MDAmZGlzcGxheT1zd2FwXCIpO1xyXG5cclxuLmN2LWNvbXBvbmVudCB7XHJcbiAgLS1ib2R5LWNvbG9yOiAjMzk0YTViO1xyXG4gIC0taW5uZXItcGFnZS1jb2xvcjogIzI2MzEzYztcclxuICAtLWlubmVyLXBhZ2UtdHJhbnNwYXJlbnQ6ICM0ODYwNzhkZDtcclxuICAtLWJhci1kYXJrOiAjNDQ1NzY5O1xyXG4gIC0tYmFyLWhvdmVyOiByZ2IoOTUsIDEyMSwgMTQ2KTtcclxuICAtLWJhci1saWdodDogI2IzY2VlYTtcclxuICAtLXRleHQtY29sb3I6IHJnYigxNzksIDIwNiwgMjM0KTtcclxuICAtLWZvbnQtZmFtaWx5OiBcIlJvYm90b1wiLCBzYW5zLXNlcmlmO1xyXG4gIC0tdGl0bGUtY29sb3I6ICNmZmZmZmY7XHJcbn1cclxuXHJcbkBtZWRpYSBzY3JlZW4gYW5kIChtaW4td2lkdGg6IDYwMHB4KSB7XHJcbiAgLmN2LWNvbXBvbmVudCB7XHJcbiAgICAtLXRleHQtd2VpZ2h0OiAzMDA7XHJcbiAgICAtLXRleHQtc2l6ZTogMTZweDtcclxuICAgIC0taW5uZXItcGFnZS1tYXJnaW46IG1pbig1dncsIDV2aCk7XHJcbiAgfVxyXG5cclxuICAvKiBwIHtcclxuICAgIHRleHQtYWxpZ246IGp1c3RpZnk7XHJcbiAgICB0ZXh0LWp1c3RpZnk6IGludGVyLXdvcmQ7XHJcbiAgfSAqL1xyXG59XHJcblxyXG5AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA2MDBweCkge1xyXG4gIC5jdi1jb21wb25lbnQge1xyXG4gICAgLS10ZXh0LXdlaWdodDogMzAwO1xyXG4gICAgLS10ZXh0LXNpemU6IDE2cHg7XHJcbiAgICAtLWlubmVyLXBhZ2UtbWFyZ2luOiBtaW4oNXZ3LCA1dmgpO1xyXG4gIH1cclxuXHJcbiAgI2N2LWlubmVyLXBhZ2Uge1xyXG4gICAgbWFyZ2luLXRvcDogM3ZoO1xyXG4gICAgbWFyZ2luLWJvdHRvbTogM3ZoO1xyXG4gIH1cclxuXHJcbiAgLyogcCB7XHJcbiAgICB0ZXh0LWFsaWduOiBsZWZ0O1xyXG4gICAgdGV4dC1qdXN0aWZ5OiBpbnRlci13b3JkOyBcclxuICB9ICovXHJcbn1cclxuIl0sInNvdXJjZVJvb3QiOiIifQ== */
+    </style>
+  </head>
+
+  <body style="">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <div class="PACE">
+        <div id="toc">
+          <span class="h2">Table des matières</span>
+          <ul>
+            <ul>
+              <li>
+                <a href="http://localhost:5000/pace#Avant-Propos"
+                  >Avant-Propos</a
+                >
+              </li>
+              <li>
+                <a href="http://localhost:5000/pace#Introduction"
+                  >Introduction</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://localhost:5000/pace#Histoire_et_d%C3%A9couvertes_scientifiques"
+                  >Histoire et découvertes scientifiques</a
+                >
+              </li>
+              <ul>
+                <li>
+                  <a
+                    href="http://localhost:5000/pace#D%C3%A9couverte_de_la_radioactivit%C3%A9"
+                    >Découverte de la radioactivité</a
+                  >
+                </li>
+                <ul>
+                  <li>
+                    <a
+                      href="http://localhost:5000/pace#Les_d%C3%A9couvertes_de_Henri_Becquerel"
+                      >Les découvertes de Henri Becquerel</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="http://localhost:5000/pace#Les_d%C3%A9couvertes_de_Pierre_et_Marie_Curie"
+                      >Les découvertes de Pierre et Marie Curie</a
+                    >
+                  </li>
+                </ul>
+                <li>
+                  <a
+                    href="http://localhost:5000/pace#Grandes_avanc%C3%A9es_en_physique_des_particules"
+                    >Grandes avancées en physique des particules</a
+                  >
+                </li>
+                <ul>
+                  <li>
+                    <a
+                      href="http://localhost:5000/pace#La_d%C3%A9couverte_des_particules_subatomiques"
+                      >La découverte des particules subatomiques</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="http://localhost:5000/pace#Les_premiers_mod%C3%A8les_du_noyau_atomique"
+                      >Les premiers modèles du noyau atomique</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="http://localhost:5000/pace#Structure_atomique_selon_Rutherford"
+                      >Structure atomique selon Rutherford</a
+                    >
+                  </li>
+                </ul>
+                <li>
+                  <a
+                    href="http://localhost:5000/pace#D%C3%A9couverte_de_la_fission_nucl%C3%A9aire"
+                    >Découverte de la fission nucléaire</a
+                  >
+                </li>
+                <ul>
+                  <li>
+                    <a href="http://localhost:5000/pace#Histoire..."
+                      >Histoire...</a
+                    >
+                  </li>
+                  <li>
+                    <a href="http://localhost:5000/pace#..._et_explications"
+                      >... et explications</a
+                    >
+                  </li>
+                </ul>
+              </ul>
+              <li>
+                <a
+                  href="http://localhost:5000/pace#De_la_radioth%C3%A9rapie_%C3%A0_la_m%C3%A9decine_nucl%C3%A9aire"
+                  >De la radiothérapie à la médecine nucléaire</a
+                >
+              </li>
+              <ul>
+                <li>
+                  <a href="http://localhost:5000/pace#Radioth%C3%A9rapie"
+                    >Radiothérapie</a
+                  >
+                </li>
+                <li>
+                  <a href="http://localhost:5000/pace#Ambulances_de_Marie_Curie"
+                    >Ambulances de Marie Curie</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="http://localhost:5000/pace#M%C3%A9decine_nucl%C3%A9aire"
+                    >Médecine nucléaire</a
+                  >
+                </li>
+              </ul>
+              <li>
+                <a
+                  href="http://localhost:5000/pace#Les_d%C3%A9sastres_nucl%C3%A9aires_et_leurs_cons%C3%A9quences"
+                  >Les désastres nucléaires et leurs conséquences</a
+                >
+              </li>
+              <ul>
+                <li>
+                  <a href="http://localhost:5000/pace#Finir_une_guerre_mondiale"
+                    >Finir une guerre mondiale</a
+                  >
+                </li>
+                <ul>
+                  <li>
+                    <a href="http://localhost:5000/pace#Projet_Manhattan"
+                      >Projet Manhattan</a
+                    >
+                  </li>
+                  <li>
+                    <a href="http://localhost:5000/pace#D%C3%A9sastres"
+                      >Désastres</a
+                    >
+                  </li>
+                  <li>
+                    <a href="http://localhost:5000/pace#Cons%C3%A9quences"
+                      >Conséquences</a
+                    >
+                  </li>
+                </ul>
+                <li>
+                  <a
+                    href="http://localhost:5000/pace#De_la_production_d&#39;%C3%A9nergie_aux_catastrophes_nucl%C3%A9aires"
+                    >De la production d'énergie aux catastrophes nucléaires</a
+                  >
+                </li>
+                <ul>
+                  <li>
+                    <a
+                      href="http://localhost:5000/pace#Production_quantitative_prometteuse"
+                      >Production quantitative prometteuse</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="http://localhost:5000/pace#T%C3%A9m%C3%A9rit%C3%A9_de_l&#39;Homme"
+                      >Témérité de l'Homme</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="http://localhost:5000/pace#Pr%C3%A9caution_face_aux_cataclysmes"
+                      >Précaution face aux cataclysmes</a
+                    >
+                  </li>
+                </ul>
+              </ul>
+              <li>
+                <a
+                  href="http://localhost:5000/pace#L&#39;inscription_du_nucl%C3%A9aire_dans_une_d%C3%A9marche_respectueuse_de_l&#39;environnement"
+                  >L'inscription du nucléaire dans une démarche respectueuse de
+                  l'environnement</a
+                >
+              </li>
+              <ul>
+                <li>
+                  <a
+                    href="http://localhost:5000/pace#Seule_source_%C3%A9nerg%C3%A9tique_durable_?"
+                    >Seule source énergétique durable ?</a
+                  >
+                </li>
+                <ul>
+                  <li>
+                    <a
+                      href="http://localhost:5000/pace#Les_solutions_utopiques_de_l&#39;%C3%A9olien_et_du_solaire"
+                      >Les solutions utopiques de l'éolien et du solaire</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="http://localhost:5000/pace#Production_efficace_et_propre"
+                      >Production efficace et propre</a
+                    >
+                  </li>
+                </ul>
+                <li>
+                  <a
+                    href="http://localhost:5000/pace#Des_d%C3%A9fis_%C3%A0_relever"
+                    >Des défis à relever</a
+                  >
+                </li>
+                <ul>
+                  <li>
+                    <a
+                      href="http://localhost:5000/pace#Les_d%C3%A9chets_radioactifs"
+                      >Les déchets radioactifs</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="http://localhost:5000/pace#La_fusion,_une_solution_?"
+                      >La fusion, une solution ?</a
+                    >
+                  </li>
+                </ul>
+              </ul>
+              <li>
+                <a href="http://localhost:5000/pace#Conclusion">Conclusion</a>
+              </li>
+              <li>
+                <a href="http://localhost:5000/pace#Bibliographie"
+                  >Bibliographie</a
+                >
+              </li>
+            </ul>
+          </ul>
+        </div>
+        <div id="container">
+          <div class="chapter-container">
+            <h2><a name="Avant-Propos">Avant-Propos</a></h2>
+            <p>
+              Destiné à tous les jeunes lecteurs avides de découvrir les
+              mystères fascinants qui se cachent derrière les phénomènes
+              scientifiques, cet article vous invite à plonger au cœur de
+              l'univers de la radioactivité et du nucléaire. À travers diverses
+              anecdotes et illustrations, nous allons explorer ensemble ces
+              concepts complexes pour les rendre accessibles et passionnants.
+            </p>
+            <p>
+              Au fil de la lecture, vous découvrirez pourquoi la radioactivité,
+              loin d'être un sujet à craindre, est au contraire un pilier
+              essentiel de notre compréhension du monde qui nous entoure. Nous
+              explorerons également les atouts et les défis du nucléaire, en
+              mettant en lumière ses contributions indispensables à notre
+              société d'aujourd'hui.
+            </p>
+            <p>
+              De plus, cet article ne se limite pas à une simple exposition des
+              bienfaits du nucléaire. Nous aborderons également de manière
+              critique d'autres sources d'énergie souvent présentées comme
+              alternatives, telles que l'éolien et le solaire. Nous analyserons
+              ces solutions, et nous verrons que, bien que séduisantes, elles ne
+              peuvent pas répondre à nos besoins énergétiques croissants.
+            </p>
+          </div>
+          <div style="margin-top: 70px; padding-top: 70px">
+            <h2><a name="Introduction">Introduction</a></h2>
+            <p>
+              Le nucléaire, source d'énergie controversée, divise les opinions
+              et engendre des débats. Promesse d'une énergie propre et efficace
+              pour certains, menace pour la sécurité et l'environnement pour
+              d'autres, son histoire est complexe et ses enjeux, multiples.
+            </p>
+            <p>
+              L'histoire de la radioactivité débute au début du
+              <span style="font-variant: small-caps">XX</span><sup>e</sup> avec
+              des avancées majeurs en physique, puis débouche sur l'énergie
+              nucléaire à l'aube de la Seconde Guerre Mondiale. Pendant cette
+              dernière, les technologies nucléaires ont connu un développement
+              fulgurant, ponctué de succès technologiques et de tragédies
+              majeures. De Tchernobyl à Fukushima, en passant par Hiroshima et
+              Nagasaki, les catastrophes nombreuses alimentent la méfiance
+              envers cette technologie très prometteuse mais dangereuse.
+            </p>
+            <p>
+              Face à l'urgence climatique et à la nécessité de réduire notre
+              émission de gaz à effets de serre, le nucléaire se présente comme
+              une alternative majeure. Son bilan carbone est quasi nul, son
+              utilisation ne dépend pas des conditions météorologiques, et ses
+              réserves de combustible sont largement supérieures à toutes les
+              autres, dont le silicium des panneaux photovoltaïques.
+            </p>
+            <p>
+              Cependant, les défis et les risques associés au nucléaire ne
+              peuvent pas être ignorés. La gestion des déchets radioactifs, la
+              sécurité des installations nucléaires, et le risque de
+              contamination radioactive constituent des obstacles majeurs à son
+              développement à grande échelle.
+            </p>
+            <p>
+              En outre, l'acceptabilité sociale du nucléaire est loin d'être
+              acquise. Les populations locales s'opposent souvent à
+              l'installation de centrales nucléaires sur leur territoire,
+              craignant les dangers potentiels et les nuisances
+              environnementales.
+            </p>
+            <p>
+              Dans ce contexte complexe et incertain, la question du nucléaire
+              se pose avec une acuité nouvelle. Faut-il y voir une solution
+              durable aux problèmes environnementaux ou une technologie
+              dangereuse et insoutenable ?
+            </p>
+            <p>
+              C'est à cette question que cet ouvrage tente de répondre. En
+              explorant les différentes dimensions du nucléaire, ses
+              potentialités et ses risques, nous espérons éclairer les choix qui
+              nous attendent et nourrir un débat citoyen, car c'est en effet en
+              comprenant les enjeux du nucléaire que nous pourrons construire un
+              avenir énergétique responsable et durable.
+            </p>
+          </div>
+          <div class="change-page"></div>
+          <div class="chapter-container">
+            <h2>
+              <a name="Histoire_et_découvertes_scientifiques"
+                >Histoire et découvertes scientifiques</a
+              >
+            </h2>
+            <div>
+              <div>
+                <div
+                  class="box-floated"
+                  style="float: right; margin-left: 25px"
+                >
+                  <div
+                    class="floatingtextbox"
+                    style="
+                      border: 3px solid rgb(200, 32, 64);
+                      background-color: rgb(255, 238, 238);
+                    "
+                  >
+                    <span
+                      class="h4 title"
+                      style="
+                        border: 3px solid rgb(200, 32, 64);
+                        background-color: rgb(255, 238, 238);
+                      "
+                      >Thermodynamique</span
+                    ><span class="floatingicon"
+                      ><svg
+                        stroke="currentColor"
+                        fill="currentColor"
+                        stroke-width="0"
+                        viewBox="0 0 24 24"
+                        height="1em"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                        style="
+                          color: rgb(200, 32, 64);
+                          background: rgb(255, 238, 238);
+                          border-radius: 50px;
+                        "
+                      >
+                        <path
+                          d="M10.97 8.265a1.45 1.45 0 0 0-.487.57.75.75 0 0 1-1.341-.67c.2-.402.513-.826.997-1.148C10.627 6.69 11.244 6.5 12 6.5c.658 0 1.369.195 1.934.619a2.45 2.45 0 0 1 1.004 2.006c0 1.033-.513 1.72-1.027 2.215-.19.183-.399.358-.579.508l-.147.123a4.329 4.329 0 0 0-.435.409v1.37a.75.75 0 1 1-1.5 0v-1.473c0-.237.067-.504.247-.736.22-.28.486-.517.718-.714l.183-.153.001-.001c.172-.143.324-.27.47-.412.368-.355.569-.676.569-1.136a.953.953 0 0 0-.404-.806C12.766 8.118 12.384 8 12 8c-.494 0-.814.121-1.03.265ZM13 17a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+                        ></path>
+                        <path
+                          d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"
+                        ></path></svg
+                    ></span>
+                    <div class="children">
+                      La thermodynamique est la branche de la physique qui
+                      étudie les échanges mécaniques (mouvement) et calorifiques
+                      (chaleur). Tirant son étymolgie des mots θερμός (thermos,
+                      signifiant <em>chaleur</em>) et δύναμις (dynamis,
+                      signifiant <em>puissance</em>), le mot thermodynamique a
+                      été introduit en 1864, par le physicien écossais William
+                      Thomson (Lord Kelvin).
+                    </div>
+                  </div>
+                </div>
+                <div class="blockquote">
+                  Il n'y a plus rien à découvrir en physique aujourd'hui, tout
+                  ce qui reste est d'améliorer la précision des mesures.
+                </div>
+                <p>
+                  Tel fut le propos que tenait Lord Kelvin en 1900. Ce dernier
+                  est révélateur de la confiance que les scientifiques de
+                  l'époque avaient dans leur compréhension du monde. Des lois
+                  paraissant inébranlables expliquaient entièrement le monde,
+                  avec les lois de Newton qui régissaient le mouvement des
+                  objets, les lois de Maxwell qui régissaient l'électricité et
+                  le magnétisme et avec trois principes qui régissaient la
+                  thermodynamique. Il semblait que tout était en place pour que
+                  la science puisse se concentrer sur l'amélioration des mesures
+                  et de la précision. Cependant, les années qui ont suivi ont
+                  montré que Kelvin se trompait.
+                </p>
+                <div style="height: 40px"></div>
+                <h3>
+                  <a name="Découverte_de_la_radioactivité"
+                    >Découverte de la radioactivité</a
+                  >
+                </h3>
+                <div
+                  class="imageboxwrapper"
+                  style="float: left; margin-right: 50px"
+                >
+                  <span class="h5 imagetitle">Henri Becquerel</span
+                  ><img
+                    src="./Nucléaire et Radioactivité_files/becquerel.jpg"
+                    alt="Henri Becquerel"
+                    class="imageimg"
+                  />
+                  <p class="imagesourcetext imagesourceleft">
+                    <em>Crédit:&nbsp;©2001-2023 Futura-Sciences</em>
+                  </p>
+                </div>
+                <p></p>
+                <h4>
+                  <a name="Les_découvertes_de_Henri_Becquerel"
+                    >Les découvertes de Henri Becquerel</a
+                  >
+                </h4>
+                En 1896, le physicien français Henri Becquerel travaillait sur
+                la phosphorescence, un phénomène par lequel certaines substances
+                émettent de la lumière après avoir été exposées à la lumière. Il
+                a exposé des sels d'uranium à la lumière du soleil, puis les a
+                placés dans une chambre noire avec une plaque photographique. Il
+                a découvert que la plaque photographique était brumeuse, même si
+                les sels n'étaient pas exposés à la lumière.
+                <p></p>
+                <p>
+                  Becquerel a d'abord pensé que la phosphorescence était
+                  responsable de l'apparition d'une image sur la plaque
+                  photographique. Cependant, il a réalisé plus tard que l'image
+                  apparaissait même si les sels n'étaient pas exposés à la
+                  lumière. Il a conclu que les sels d'uranium émettent
+                  spontanément des rayons qui peuvent traverser la matière et
+                  impressionner une plaque photographique. Becquerel a nommé ces
+                  rayons «&nbsp;rayons uraniques&nbsp;». Il a également
+                  découvert que les rayons uraniques pouvaient ioniser l'air, ce
+                  qui signifie qu'ils pouvaient provoquer la séparation des
+                  charges électriques. Les travaux de Becquerel ont été
+                  poursuivis par Marie et Pierre Curie, qui ont découvert deux
+                  nouveaux éléments radioactifs, le polonium et le radium. Ils
+                  ont également mis au point une méthode pour isoler le radium,
+                  qui est un élément très radioactif.
+                </p>
+                <div style="height: 40px"></div>
+                <div class="notebox">
+                  <span class="title h4">Méthode pour isoler du radium</span>
+                  <div class="children">
+                    La première étape consiste à extraire chimiquement l'uranium
+                    de la pechblende, un minerai qui contient de l'uranium et du
+                    radium. Une fois l'uranium extrait, il est nécessaire de le
+                    séparer du radium. Pour se faire, les Curie ont utilisé une
+                    méthode appelée « chimie radioactive » s'appuyant sur le
+                    fait que les éléments radioactifs émettent des rayons
+                    ionisants, qui peuvent être détectés par des appareils
+                    spéciaux. Ils ont ensuite fait usage d'un appareil appelé «
+                    électroscope » pour détecter les rayons ionisants. Ils ont
+                    placé l'uranium dans un électroscope et ont observé que
+                    l'aiguille de l'électroscope se déplaçait, ce qui indiquait
+                    que l'uranium émettait des rayons ionisants. Après ce
+                    constat, Pierre et Marie Curie ont mis en œuvre un procédé
+                    appelé « chromatographie » pour séparer le radium de
+                    l'uranium - la chromatographie est une technique qui permet
+                    de séparer des substances en fonction de leur solubilité. En
+                    utilisant cette méthode, et après plusieurs étapes de
+                    purification, ils ont finalement obtenu une quantité de
+                    radium pur. Cette quantité était très faible, seulement
+                    quelques milligrammes de radium pour quatre cents tonnes de
+                    pechblende.
+                  </div>
+                </div>
+                <div class="change-page"></div>
+                <h4>
+                  <a name="Les_découvertes_de_Pierre_et_Marie_Curie"
+                    >Les découvertes de Pierre et Marie Curie</a
+                  >
+                </h4>
+                <div style="display: flex; flex-direction: row; clear: both">
+                  <div
+                    class="imageboxwrapper"
+                    style="float: left; width: 25%; margin-right: 50px"
+                  >
+                    <span class="h5 imagetitle">Médaille du prix Nobel</span
+                    ><img
+                      src="./Nucléaire et Radioactivité_files/nobel.jpg"
+                      alt="Médaille du prix Nobel"
+                      class="imageimg"
+                    />
+                    <p class="imagesourcetext imagesourceleft">
+                      <em
+                        >Crédit:&nbsp;Jonathunder, Medal: Erik Lindberg,
+                        (Wikimedia, Public Domain)</em
+                      >
+                    </p>
+                  </div>
+                  <div style="width: 100%">
+                    <div
+                      class="box-floated"
+                      style="
+                        float: right;
+                        margin-left: 60px;
+                        margin-bottom: 70px;
+                      "
+                    >
+                      <div
+                        class="floatingtextbox"
+                        style="
+                          border: 3px solid rgb(59, 71, 206);
+                          background-color: rgb(227, 232, 255);
+                        "
+                      >
+                        <span
+                          class="h4 title"
+                          style="
+                            border: 3px solid rgb(59, 71, 206);
+                            background-color: rgb(227, 232, 255);
+                          "
+                          >Fait historique</span
+                        ><span class="floatingicon"
+                          ><svg
+                            stroke="currentColor"
+                            fill="currentColor"
+                            stroke-width="0"
+                            viewBox="0 0 16 16"
+                            height="1em"
+                            width="1em"
+                            xmlns="http://www.w3.org/2000/svg"
+                            style="
+                              color: rgb(59, 71, 206);
+                              background: rgb(227, 232, 255);
+                              border-radius: 50px;
+                            "
+                          >
+                            <path
+                              d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                            ></path>
+                            <path
+                              d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"
+                            ></path></svg
+                        ></span>
+                        <div class="children">
+                          Marie Curie est devenue la première femme à recevoir
+                          un prix Nobel, et la seule à en recevoir deux, dans
+                          deux disciplines différentes.
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      En 1903, Marie et Pierre Curie, ainsi qu'Henri Becquerel,
+                      ont reçu le prix Nobel de physique pour leurs travaux sur
+                      la radioactivité.
+                    </p>
+                    <p>
+                      La découverte de la radioactivité par Marie et Pierre
+                      Curie a été une étape importante dans l'histoire de la
+                      science. Elle a conduit au développement de nouvelles
+                      technologies, telles que la radiothérapie et la médecine
+                      nucléaire, dont nous parlerons plus loin.
+                    </p>
+                  </div>
+                </div>
+                <h3>
+                  <a name="Grandes_avancées_en_physique_des_particules"
+                    >Grandes avancées en physique des particules</a
+                  >
+                </h3>
+                Les travaux des Curie ont montré que la radioactivité était due
+                à des processus qui se déroulaient au sein des atomes.
+                Cependant, la nature exacte du noyaux atomique était encore
+                inconnue.
+                <div
+                  class="imageboxwrapper"
+                  style="float: right; margin-left: 50px"
+                >
+                  <span class="h5 imagetitle">Expérience de Rutherford</span
+                  ><img
+                    src="./Nucléaire et Radioactivité_files/Geiger-Marsden_experiment_expectation_and_result__French_.png"
+                    alt="Expérience de Rutherford"
+                    class="imageimg"
+                  />
+                  <p class="imagesourcetext imagesourceright">
+                    <em
+                      >Crédit:&nbsp;Kurzon (Wikimedia, Creative Commons
+                      Attribution-Share Alike 3.0)</em
+                    >
+                  </p>
+                </div>
+                <h4>
+                  <a name="La_découverte_des_particules_subatomiques"
+                    >La découverte des particules subatomiques</a
+                  >
+                </h4>
+                <p>
+                  Ernest Rutherford, un physicien néo-zélandais du début du
+                  XX<sup>e</sup>siècle considéré comme l'un des pères de la
+                  physique nucléaire et de la chimie nucléaire, a ouvert la voie
+                  à la découverte de nouvelles particules subatomiques.
+                  Rutherford est principalement connu pour son expérience de la
+                  feuille d'or, menée en 1909. Cette expérience a permis de
+                  démontrer que la matière est constituée d'un noyau dense et
+                  chargé positivement, entouré d'électrons chargés négativement.
+                  Ce modèle atomique, appelé modèle de Rutherford, a
+                  révolutionné notre compréhension de la structure de la
+                  matière.
+                </p>
+                <h4>
+                  <a name="Les_premiers_modèles_du_noyau_atomique"
+                    >Les premiers modèles du noyau atomique</a
+                  >
+                </h4>
+                <div
+                  class="imageboxwrapper"
+                  style="float: left; margin-right: 50px"
+                >
+                  <span class="imagetitle"></span
+                  ><img
+                    src="./Nucléaire et Radioactivité_files/480px-Rutherford_atomic_planetary_model.svg.png"
+                    alt=""
+                    class="imageimg"
+                  />
+                  <p class="imagesourcetext imagesourceleft">
+                    <em
+                      >Crédit:&nbsp;Bensteele1995 (Wikimedia, Creative Commons
+                      Attribution-Share Alike 3.0)</em
+                    >
+                  </p>
+                </div>
+                <p>
+                  À cette époque, la structure de l'atome était décrite par le
+                  modèle de Thomson, qui supposait que l'atome était une sphère
+                  de matière chargée positivement, avec des électrons chargés
+                  négativement répartis uniformément à l'intérieur. Cependant,
+                  cette théorie ne pouvait pas expliquer les résultats de
+                  l'expérience de Rutherford, qui montraient que certaines
+                  particules α étaient déviées de leur trajectoire lorsqu'elles
+                  traversaient une feuille d'or.
+                </p>
+                <h4>
+                  <a name="Structure_atomique_selon_Rutherford"
+                    >Structure atomique selon Rutherford</a
+                  >
+                </h4>
+                <p>
+                  L'expérience de Rutherford a permis de mettre en évidence que
+                  la masse et la charge positive de l'atome sont concentrées
+                  dans un noyau central, tandis que les électrons sont répartis
+                  autour du noyau sur des orbites circulaires. Ce modèle, appelé
+                  modèle planétaire du fait de sa ressemblance avec la structure
+                  du système solaire, est encore utilisé aujourd'hui. Le modèle
+                  atomique de Rutherford a eu un impact profond sur la science.
+                  Il a permis de comprendre la structure et les propriétés des
+                  atomes, et a ouvert la voie au développement de la chimie
+                  nucléaire et de la physique nucléaire. Pour ses contributions
+                  à la science, Rutherford a reçu le prix Nobel de chimie en
+                  1908. En 1932, le physicien britannique James Chadwick a
+                  découvert le neutron, une particule sans charge électrique. En
+                  1932 également, le physicien américain Carl Anderson a
+                  découvert le positron, une particule identique à l'électron
+                  mais chargée positivement. Ces découvertes ont permis de
+                  comprendre que le noyau atomique était constitué de protons,
+                  de neutrons et d'électrons. Elles ont également ouvert la voie
+                  à la découverte d'autres particules subatomiques.
+                </p>
+                <h3>
+                  <a name="Découverte_de_la_fission_nucléaire"
+                    >Découverte de la fission nucléaire</a
+                  >
+                </h3>
+                <h4><a name="Histoire...">Histoire...</a></h4>
+                <div
+                  class="box-floated"
+                  style="float: left; margin-right: 25px"
+                >
+                  <div
+                    class="floatingtextbox"
+                    style="
+                      border: 3px solid rgb(200, 32, 64);
+                      background-color: rgb(255, 238, 238);
+                    "
+                  >
+                    <span
+                      class="h4 title"
+                      style="
+                        border: 3px solid rgb(200, 32, 64);
+                        background-color: rgb(255, 238, 238);
+                      "
+                      >Matière noire</span
+                    ><span class="floatingicon"
+                      ><svg
+                        stroke="currentColor"
+                        fill="currentColor"
+                        stroke-width="0"
+                        viewBox="0 0 24 24"
+                        height="1em"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                        style="
+                          color: rgb(200, 32, 64);
+                          background: rgb(255, 238, 238);
+                          border-radius: 50px;
+                        "
+                      >
+                        <path
+                          d="M10.97 8.265a1.45 1.45 0 0 0-.487.57.75.75 0 0 1-1.341-.67c.2-.402.513-.826.997-1.148C10.627 6.69 11.244 6.5 12 6.5c.658 0 1.369.195 1.934.619a2.45 2.45 0 0 1 1.004 2.006c0 1.033-.513 1.72-1.027 2.215-.19.183-.399.358-.579.508l-.147.123a4.329 4.329 0 0 0-.435.409v1.37a.75.75 0 1 1-1.5 0v-1.473c0-.237.067-.504.247-.736.22-.28.486-.517.718-.714l.183-.153.001-.001c.172-.143.324-.27.47-.412.368-.355.569-.676.569-1.136a.953.953 0 0 0-.404-.806C12.766 8.118 12.384 8 12 8c-.494 0-.814.121-1.03.265ZM13 17a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+                        ></path>
+                        <path
+                          d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"
+                        ></path></svg
+                    ></span>
+                    <div class="children">
+                      La matière noire est une forme de "matière" qui ne rayonne
+                      ni n'absorbe de lumière. Elle n'est donc pas détectable
+                      directement par les méthodes traditionnelles d'observation
+                      astronomique. Son existence a été postulée pour expliquer
+                      divers phénomènes observés dans l'univers, notamment les
+                      vitesses de rotation des galaxies, les mouvements des
+                      étoiles au sein des galaxies et les effets de lentille
+                      gravitationnelle. On estime que la matière noire constitue
+                      environ un tiers de l'univers observable.
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  Dans les années 1950 et 1960, les physiciens ont découvert de
+                  nombreuses particules subatomiques, jusqu'alors inconnues. Ces
+                  découvertes ont conduit au développement du modèle standard de
+                  la physique des particules, qui est un modèle théorique qui
+                  décrit les interactions entre les particules subatomiques. Le
+                  modèle standard est un modèle très réussi qui a permis de
+                  prédire avec précision de nombreuses propriétés des particules
+                  subatomiques. Cependant, il existe encore des questions
+                  auxquelles il ne répond pas, telle que la nature de la matière
+                  noire.
+                </p>
+                <p>
+                  La découverte de la fission nucléaire est une histoire qui a
+                  commencé en 1938, lorsque les physiciens allemands Otto Hahn
+                  et Fritz Strassmann ont découvert que l'uranium pouvait se
+                  diviser en deux atomes plus petits lorsqu'il était bombardé
+                  par des neutrons. Cette découverte a été une étape importante
+                  dans le développement de la technologie nucléaire et a conduit
+                  à la création de la bombe atomique.
+                </p>
+                <h4><a name="..._et_explications">... et explications</a></h4>
+                <div
+                  class="notebox"
+                  style="
+                    font-size: 1.15em;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                  "
+                >
+                  <span class="title h4">Fission nucléaire expliquée</span>
+                  <div class="children">
+                    La fission nucléaire a était mise en évidence pour la
+                    première fois en 1938, lorsque les physiciens allemands Otto
+                    Hahn et Fritz Strassmann ont découvert que l'uranium pouvait
+                    se diviser en deux atomes plus petits lorsqu'il était
+                    bombardé par des neutrons. Cette découverte a été une étape
+                    importante dans le développement de la technologie nucléaire
+                    et a conduit à la création de la bombe atomique. Hahn et
+                    Strassmann travaillaient sur la radioactivité de l'uranium
+                    lorsqu'ils ont observé que l'uranium bombardé par des
+                    neutrons produisait des éléments plus légers, tels que le
+                    baryum et le krypton. Ils ont initialement supposé que ces
+                    éléments étaient produits par la capture d'un neutron par
+                    l'uranium, mais ils ont rapidement réalisé que quelque chose
+                    de plus complexe se produisait. Lise Meitner, une amie de
+                    Hahn qui avait fui l'Allemagne nazie, a proposé une
+                    explication de la fission nucléaire. Elle a suggéré que
+                    l'uranium pouvait se diviser en deux atomes plus petits,
+                    libérant une grande quantité d'énergie. L'explication de
+                    Meitner a été confirmée par d'autres physiciens, dont Otto
+                    Frisch, le neveu de Meitner. Frisch a également calculé que
+                    la fission nucléaire libérait une quantité d'énergie
+                    considérable.
+                  </div>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                  "
+                >
+                  <div class="imageboxwrapper">
+                    <span class="h5 imagetitle"
+                      >Schéma expliquant la fission nucléaire</span
+                    ><img
+                      src="./Nucléaire et Radioactivité_files/Nuclear_fission.png"
+                      alt="Schéma expliquant la fission nucléaire"
+                      class="imageimg"
+                      style="max-height: 700px"
+                    />
+                    <p class="imagesourcetext">
+                      <em>Crédit:&nbsp; Wikimedia (Public domain)</em>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="change-page"></div>
+          <div class="chapter-container">
+            <h2>
+              <a name="De_la_radiothérapie_à_la_médecine_nucléaire"
+                >De la radiothérapie à la médecine nucléaire</a
+              >
+            </h2>
+            <div>
+              <p>
+                Malgré les polémiques concernant le nucléaire et la
+                radioactivté, de nombreux avantages sont peu à peu découverts.
+                La médecine fait partie des domaines qui en bénéficient
+                pleinement.
+              </p>
+              <h3><a name="Radiothérapie">Radiothérapie</a></h3>
+              <p>
+                Forme de traitement médical utilisant des rayonnements ionisants
+                pour détruire les cellules cancéreuses ou pour inhiber leur
+                croissance, la radiothérapie est aujourd'hui utilisée dans la
+                lutte contre le cancer, mais est également utilisée pour traiter
+                d'autres affections médicales telles que des troubles
+                inflammatoires ou des maladies vasculaires. Cette technique de
+                traitement, bien qu'ancienne, est encore très largement utilisée
+                aujourd'hui.
+              </p>
+              <p>
+                Le premier traitement documenté d'un patient par radiothérapie a
+                eu lieu en 1896, peu de temps après la découverte des rayons X
+                par Wilhelm Conrad Röntgen. Cependant, le traitement n'était pas
+                spécifiquement dirigé contre le cancer, mais plutôt utilisé pour
+                traiter des affections cutanées.
+              </p>
+              <p>
+                La première utilisation de la radiothérapie pour traiter un cas
+                de cancer a été documentée en 1903 par le physicien français
+                Antoine Béclère. Il a traité un patient atteint d'un cancer
+                cutané en utilisant des radiations émises par une source de
+                radium. Bien que rudimentaire par rapport aux normes actuelles,
+                ce traitement a ouvert la voie à l'utilisation de la
+                radiothérapie dans le traitement du cancer.
+              </p>
+              <h3>
+                <a name="Ambulances_de_Marie_Curie"
+                  >Ambulances de Marie Curie</a
+                >
+              </h3>
+              <div
+                class="imageboxwrapper"
+                style="float: right; margin-left: 50px"
+              >
+                <span class="h5 imagetitle"
+                  >Marie Curie au volant de son ambulance</span
+                ><img
+                  src="./Nucléaire et Radioactivité_files/Marie_Curie_-_Mobile_X-Ray-Unit.jpg"
+                  alt="Marie Curie au volant de son ambulance"
+                  class="imageimg"
+                />
+                <p class="imagesourcetext imagesourceright">
+                  <em>Crédit:&nbsp;Wikimedia (Public Domain)</em>
+                </p>
+              </div>
+              <p>
+                À l'aube de la première Guerre mondiale, Marie Curie a reçu une
+                autorisation de la part du ministère de l'armée afin de mettre
+                en place des unités mobiles de soins, équipées de radiographies
+                portatives. Ces ambulances, surnommées "Petites Curies", ont été
+                utilisées pour détecter les blessures et les fractures chez les
+                soldats sur le front.
+              </p>
+              <p>
+                Marie Curie ne se limita pas seulement à la détection des
+                blessures. Elle traita les tissus affectés par les lésions,
+                ouvrant ainsi la voie à une nouvelle ère dans la médecine
+                militaire. Les rayons X, émis par les substances radioactives
+                découvertes par Curie elle-même, ont démontré une efficacité
+                remarquable dans la réduction des tumeurs et dans la destruction
+                des cellules cancéreuses.
+              </p>
+              <p>
+                L'héritage de Marie Curie dans le domaine de la radiothérapie
+                perdure aujourd'hui, rappelant comment une scientifique dévouée
+                a pu transformer une période de conflit en une opportunité de
+                progrès médical. Sa vision et son courage ont ouvert la voie à
+                des traitements oncologiques modernes, établissant la
+                radiothérapie comme l'une des armes les plus puissantes dans la
+                lutte contre le cancer, et ce, bien au-delà des champs de
+                bataille de la Première Guerre mondiale.
+              </p>
+              <h3><a name="Médecine_nucléaire">Médecine nucléaire</a></h3>
+              <div
+                class="box-floated"
+                style="float: left; margin-right: 25px; max-width: 700px"
+              >
+                <div
+                  class="floatingtextbox"
+                  style="
+                    border: 3px solid rgb(200, 32, 64);
+                    background-color: rgb(255, 238, 238);
+                  "
+                >
+                  <span
+                    class="h4 title"
+                    style="
+                      border: 3px solid rgb(200, 32, 64);
+                      background-color: rgb(255, 238, 238);
+                    "
+                    >Tomographie par émission de positions</span
+                  ><span class="floatingicon"
+                    ><svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style="
+                        color: rgb(200, 32, 64);
+                        background: rgb(255, 238, 238);
+                        border-radius: 50px;
+                      "
+                    >
+                      <path
+                        d="M10.97 8.265a1.45 1.45 0 0 0-.487.57.75.75 0 0 1-1.341-.67c.2-.402.513-.826.997-1.148C10.627 6.69 11.244 6.5 12 6.5c.658 0 1.369.195 1.934.619a2.45 2.45 0 0 1 1.004 2.006c0 1.033-.513 1.72-1.027 2.215-.19.183-.399.358-.579.508l-.147.123a4.329 4.329 0 0 0-.435.409v1.37a.75.75 0 1 1-1.5 0v-1.473c0-.237.067-.504.247-.736.22-.28.486-.517.718-.714l.183-.153.001-.001c.172-.143.324-.27.47-.412.368-.355.569-.676.569-1.136a.953.953 0 0 0-.404-.806C12.766 8.118 12.384 8 12 8c-.494 0-.814.121-1.03.265ZM13 17a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+                      ></path>
+                      <path
+                        d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"
+                      ></path></svg
+                  ></span>
+                  <div class="children">
+                    La tomographie par émission de positons (TEP) est une
+                    technique d'imagerie médicale qui utilise la radioactivité
+                    pour visualiser l'activité métabolique des tissus à
+                    l'intérieur du corps. En injectant un traceur spécifique, le
+                    scanner TEP détecte les positrons émis, fournissant une
+                    image tridimensionnelle de la distribution du traceur. Cette
+                    technique est largement utilisée en oncologie pour
+                    diagnostiquer les cancers et évaluer la réponse au
+                    traitement, ainsi que dans d'autres domaines médicaux pour
+                    détecter diverses affections. La TEP offre une visualisation
+                    précise de la fonction des tissus, permettant une prise en
+                    charge clinique plus efficace des patients.
+                  </div>
+                </div>
+              </div>
+              <p>
+                La médecine nucléaire est une branche spécialisée de la médecine
+                qui utilise des traceurs radioactifs pour diagnostiquer et
+                traiter diverses affections médicales. Elle repose sur la
+                détection et l'imagerie des radiations émises par ces traceurs
+                lorsqu'ils sont introduits dans le corps.
+              </p>
+              <p>
+                Dans le domaine du diagnostic, la médecine nucléaire offre des
+                techniques d'imagerie avancées telles que la tomographie par
+                émission de positons (TEP) et la scintigraphie. Ces procédures
+                permettent de visualiser les fonctions et les structures
+                internes du corps avec une grande précision, facilitant ainsi le
+                diagnostic précoce et la localisation précise de maladies telles
+                que le cancer, les troubles cardiaques, les maladies osseuses et
+                neurologiques, entre autres.
+              </p>
+              <p>
+                En plus du diagnostic, la médecine nucléaire est également
+                utilisée pour le traitement de certaines affections. Par
+                exemple, la thérapie par radioisotopes est une technique où des
+                substances radioactives sont administrées au patient pour cibler
+                spécifiquement les cellules cancéreuses. Ces substances émettent
+                des particules de haute énergie qui détruisent les cellules
+                cancéreuses tout en minimisant les dommages aux tissus sains
+                environnants.
+              </p>
+              <p>
+                La médecine nucléaire joue un rôle crucial dans la médecine
+                moderne en offrant des outils de diagnostic avancés et des
+                options thérapeutiques innovantes. Elle permet une approche
+                personnalisée du traitement en fournissant des informations
+                précises sur la physiologie et le métabolisme des tissus, aidant
+                ainsi les médecins à prendre des décisions éclairées pour la
+                prise en charge des patients. En constante évolution, la
+                médecine nucléaire continue de contribuer de manière
+                significative aux progrès de la médecine et à l'amélioration des
+                soins de santé.
+              </p>
+            </div>
+          </div>
+          <div class="spacing"></div>
+          <div class="chapter-container">
+            <h2>
+              <a name="Les_désastres_nucléaires_et_leurs_conséquences"
+                >Les désastres nucléaires et leurs conséquences</a
+              >
+            </h2>
+            <p>
+              L'énergie nucléaire, malgré ses avantages, est souvent perçue
+              comme trop dangereuse pour être utilisée sereinement, en raison
+              des incidents passés. Cette perception de risque a profondément
+              marqué les esprits. Les accidents nucléaires majeurs comme nous le
+              verrons dans cette partie ont laissé des traces dans la mémoire
+              collective et ont souligné la nécessité d'une gestion rigoureuse
+              et prudente de cette technologie.
+            </p>
+            <div>
+              <h3>
+                <a name="Finir_une_guerre_mondiale"
+                  >Finir une guerre mondiale</a
+                >
+              </h3>
+              <h4><a name="Projet_Manhattan">Projet Manhattan</a></h4>
+              <p>
+                Lancé en 1939, le Projet Manhattan a été une réponse directe à
+                la menace croissante de l'Allemagne nazie et de ses alliés. Les
+                États-Unis, craignant que les Nazis ne développent leur propre
+                bombe atomique, ont décidé de devancer cette possibilité en
+                construisant la leur.
+              </p>
+              <p>
+                Le projet a rassemblé certains des esprits les plus brillants de
+                l'époque, dont Robert Oppenheimer, Enrico Fermi et Niels Bohr.
+                Ces scientifiques, parmi d'autres, ont travaillé sans relâche
+                dans des laboratoires secrets à Los Alamos, au Nouveau-Mexique.
+              </p>
+              <div
+                class="imageboxwrapper"
+                style="float: right; margin-left: 50px"
+              >
+                <span class="h5 imagetitle">Hiroshima après la bombe</span
+                ><img
+                  src="./Nucléaire et Radioactivité_files/hiroshima.png"
+                  alt="Hiroshima après la bombe"
+                  class="imageimg"
+                />
+                <p class="imagesourcetext imagesourceright">
+                  <em>Crédit:&nbsp;©BBC 2024</em>
+                </p>
+              </div>
+              <h4><a name="Désastres">Désastres</a></h4>
+              <p>
+                Après des années de recherche et de développement, le Projet
+                Manhattan a abouti à la création de deux types de bombes
+                atomiques. Ces armes ont été utilisées contre les villes
+                japonaises d'Hiroshima et Nagasaki en août 1945, mettant fin à
+                la Seconde Guerre mondiale.
+              </p>
+              <p>
+                Les bombardements atomiques d'Hiroshima et Nagasaki en 1945 ont
+                mis fin à la Seconde Guerre mondiale, mais ils ont également
+                provoqué des destructions massives et des pertes humaines
+                considérables. Ces événements ont mis en évidence les dangers de
+                l'énergie nucléaire, conduisant à une prise de conscience
+                mondiale et à des efforts pour réglementer son utilisation et
+                promouvoir le désarmement nucléaire.
+              </p>
+              <h4><a name="Conséquences">Conséquences</a></h4>
+              <p>
+                Ces bombes ont laissé un héritage de souffrance à long terme,
+                avec des survivants souffrant de maladies liées à la radiation
+                et des zones contaminées demeurant inhabitables pendant
+                plusieurs décennies. Ces conséquences ont renforcé les
+                préoccupations mondiales quant aux effets à long terme de
+                l'utilisation de l'énergie nucléaire, soulignant la nécessité de
+                gérer de manière responsable les déchets radioactifs et de
+                prévenir les catastrophes nucléaires futures. Cependant, cette
+                promesse a été difficile à tenir, comme nous le verrons par la
+                suite.
+              </p>
+              <p>
+                La réalisation du Projet Manhattan a également montré les
+                conséquences désastreuses qui peuvent être engendrées par
+                l'énergie nucléaire. Les bombardements atomiques ont également
+                impacté le monde entier par la puissance destructrice de
+                l'énergie nucléaire lorsqu'elle est mal utilisée.
+              </p>
+            </div>
+            <div>
+              <h3>
+                <a
+                  name="De_la_production_d&#39;énergie_aux_catastrophes_nucléaires"
+                  >De la production d'énergie aux catastrophes nucléaires</a
+                >
+              </h3>
+              <div class="box-floated" style="float: right; margin-left: 25px">
+                <div
+                  class="floatingtextbox"
+                  style="
+                    border: 3px solid rgb(59, 71, 206);
+                    background-color: rgb(227, 232, 255);
+                  "
+                >
+                  <span
+                    class="h4 title"
+                    style="
+                      border: 3px solid rgb(59, 71, 206);
+                      background-color: rgb(227, 232, 255);
+                    "
+                    >Tchernobyl</span
+                  ><span class="floatingicon"
+                    ><svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 16 16"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style="
+                        color: rgb(59, 71, 206);
+                        background: rgb(227, 232, 255);
+                        border-radius: 50px;
+                      "
+                    >
+                      <path
+                        d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                      ></path>
+                      <path
+                        d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"
+                      ></path></svg
+                  ></span>
+                  <div class="children">
+                    La catastrophe de Tchernobyl est l'un des pires accidents
+                    nucléaires de l'histoire. Le 26 avril 1986, lors d'un test
+                    de sécurité au réacteur numéro 4 de la centrale nucléaire de
+                    Tchernobyl, située près de la ville de Pripyat en Ukraine,
+                    une série d'erreurs humaines et de défaillances techniques
+                    ont conduit à une violente explosion, détruisant un des
+                    réacteur. Cette explosion a libéré d'énormes quantités de
+                    matières radioactives dans l'atmosphère, formant un nuage
+                    radioactif qui s'est propagé sur de vastes régions d'Europe,
+                    contaminant des terres agricoles, des villes et des
+                    populations. Les effets à long terme sur la santé, notamment
+                    le cancer et les malformations congénitales, ont été
+                    dévastateurs pour de nombreuses personnes vivant dans les
+                    zones touchées. Pour contenir la contamination, des efforts
+                    de nettoyage massifs ont été entrepris, notamment
+                    l'enterrement de grandes quantités de sol contaminé et la
+                    construction d'un sarcophage en béton autour du réacteur
+                    endommagé pour le confiner. Des milliers de personnes ont
+                    été évacuées de la zone et Pripyat, aujourd'hui dépourvue de
+                    vie.
+                  </div>
+                </div>
+              </div>
+              <h4>
+                <a name="Production_quantitative_prometteuse"
+                  >Production quantitative prometteuse</a
+                >
+              </h4>
+              Malgré les risques, l'énergie nucléaire offre un potentiel énorme
+              en termes de production d'énergie. Les centrales nucléaires
+              peuvent produire une grande quantité d'énergie à partir d'une
+              petite quantité de matière, ce qui en fait une source d'énergie
+              potentiellement efficace et durable.
+              <h4><a name="Témérité_de_l&#39;Homme">Témérité de l'Homme</a></h4>
+              <p>
+                Cependant, l'histoire a montré que l'homme peut être téméraire
+                dans son utilisation de l'énergie nucléaire. Les accidents de
+                Tchernobyl et Fukushima sont des exemples de ce qui peut arriver
+                lorsque la sécurité n'est pas prise au sérieux.
+              </p>
+              <p>
+                Ces catastrophes ont non seulement causé des dommages
+                environnementaux à long terme, mais elles ont également eu des
+                conséquences dévastatrices pour les populations locales.
+              </p>
+              <h4>
+                <a name="Précaution_face_aux_cataclysmes"
+                  >Précaution face aux cataclysmes</a
+                >
+              </h4>
+              <p>
+                Ces événements soulignent l'importance de la prudence dans
+                l'utilisation de l'énergie nucléaire. Il est essentiel de mettre
+                en place des mesures de sécurité strictes et de maintenir une
+                surveillance constante pour prévenir les accidents. De plus, il
+                est crucial de continuer à rechercher et à développer des
+                technologies plus sûres et plus efficaces pour l'avenir.
+              </p>
+            </div>
+          </div>
+          <div style="padding-top: 80px; clear: both"></div>
+          <div class="chapter-container">
+            <h2>
+              <a
+                name="L&#39;inscription_du_nucléaire_dans_une_démarche_respectueuse_de_l&#39;environnement"
+                >L'inscription du nucléaire dans une démarche respectueuse de
+                l'environnement</a
+              >
+            </h2>
+            <div>
+              <h3>
+                <a name="Seule_source_énergétique_durable_?"
+                  >Seule source énergétique durable ?</a
+                >
+              </h3>
+              <p>
+                Face à l'urgence climatique et à la nécessité de réduire notre
+                dépendance aux énergies fossiles, l'éolien et le photovoltaïque
+                se présentent comme des alternatives prometteuses. Cependant,
+                une analyse approfondie révèle que leur adoption à grande
+                échelle comme solution unique relève de l'utopie, car ces
+                énergies nouvelles se heurtent à des défis majeurs en termes de
+                coût, de production et d'impact environnemental.
+              </p>
+              <div class="box-floated" style="float: right; margin-left: 25px">
+                <div
+                  class="floatingtextbox"
+                  style="
+                    border: 3px solid rgb(59, 71, 206);
+                    background-color: rgb(227, 232, 255);
+                  "
+                >
+                  <span
+                    class="h4 title"
+                    style="
+                      border: 3px solid rgb(59, 71, 206);
+                      background-color: rgb(227, 232, 255);
+                    "
+                    >Comparaison énergétique</span
+                  ><span class="floatingicon"
+                    ><svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 16 16"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style="
+                        color: rgb(59, 71, 206);
+                        background: rgb(227, 232, 255);
+                        border-radius: 50px;
+                      "
+                    >
+                      <path
+                        d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                      ></path>
+                      <path
+                        d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"
+                      ></path></svg
+                  ></span>
+                  <div class="children">
+                    En moyenne, en France, un réacteur nucléaire produit en
+                    moyenne 10 millions de GWh. En comparaison, une éolienne
+                    produit en moyenne 10 000 MW sur le territoire français,
+                    donc il faudrait plus de 1000 éoliennes et un vent soufflant
+                    de façon ininterrompue pour égaler la puissance d'un seul
+                    réacteur nucléaire, alors que leur taille est très
+                    similaire. La comparaison est encore plus flagrante avec les
+                    panneaux solaires.
+                  </div>
+                </div>
+              </div>
+              <h4>
+                <a name="Les_solutions_utopiques_de_l&#39;éolien_et_du_solaire"
+                  >Les solutions utopiques de l'éolien et du solaire</a
+                >
+              </h4>
+              <p>
+                De prime abord, l'installation et la maintenance des éoliennes
+                et des panneaux solaires nécessitent des investissements
+                colossaux. Le coût de production de l'énergie éolienne et
+                photovoltaïque reste élevé par rapport aux sources
+                traditionnelles, malgré les progrès technologiques. La
+                dépendance aux subventions publiques pour maintenir la
+                compétitivité de ces technologies fragilise leur viabilité à
+                long terme et soulève des questions d'équité financière.
+              </p>
+              <p>
+                De plus, la production d'énergie éolienne et photovoltaïque est
+                intrinsèquement variable et dépendante des conditions
+                météorologiques. Le manque de vent ou d'ensoleillement peut
+                entraîner des baisses de production significatives, créant une
+                instabilité dans le réseau électrique. De plus, l'être humain
+                est incapable de stocker efficacement de l'énergie encore
+                aujourd'hui, ce qui renforce l'enjeu de l'intermittence. Le
+                besoin d'énergie ne doit pas dépendre des conditions
+                météorologiques, mais bien être stable et fiable. Contrairement
+                à l'éolien et au solaire, le nucléaire a la capacité à être
+                indépendant de ces conditions.
+              </p>
+              <p>
+                Enfin, l'installation d'éoliennes et de panneaux solaires peut
+                avoir un impact négatif sur les paysages et la biodiversité. En
+                effet, de nombreux parcs photovoltaïques et éoliens sont
+                construits en abattant des forêts, comme le montre l'exemple du
+                champ de panneaux solaires d'Estézargues. Par ailleurs, la
+                fabrication et le recyclage de ces technologies nécessitent
+                l'utilisation de ressources naturelles et de substances
+                polluantes. L'impact sonore des éoliennes peut nuire à la
+                qualité de vie des riverains. L'acceptabilité sociale de ces
+                technologies devient alors un enjeu crucial.
+              </p>
+              <h4>
+                <a name="Production_efficace_et_propre"
+                  >Production efficace et propre</a
+                >
+              </h4>
+              <p>
+                Le nucléaire présente des atouts indéniables en tant que source
+                d'énergie dense et constante. Les centrales nucléaires sont
+                capables de produire d'énormes quantités d'électricité tout en
+                émettant relativement peu de dioxyde de carbone une fois
+                qu'elles sont en activité. Ces caractéristiques en font une
+                option attrayante pour répondre à la demande croissante en
+                énergie, tout en limitant les émissions de gaz à effet de serre.
+                Par ailleurs, les progrès technologiques continus ont permis
+                d'améliorer la sûreté et l'efficacité des réacteurs nucléaires.
+                Ces avancées ont contribué à réduire les risques potentiels pour
+                l'environnement et la sécurité, renforçant ainsi la viabilité à
+                long terme de cette source d'énergie. En conséquence, le
+                nucléaire demeure une composante essentielle de nombreux plans
+                énergétiques nationaux et internationaux, offrant une
+                alternative crédible aux combustibles fossiles tout en
+                contribuant à la transition vers une économie à faibles
+                émissions de carbone.
+              </p>
+            </div>
+            <div>
+              <h3><a name="Des_défis_à_relever">Des défis à relever</a></h3>
+              <h4>
+                <a name="Les_déchets_radioactifs">Les déchets radioactifs</a>
+              </h4>
+              <div
+                class="imageboxwrapper"
+                style="float: right; margin-left: 50px; margin-bottom: 30px"
+              >
+                <span class="h5 imagetitle"
+                  >Schéma explicatif de la fusion nucléaire</span
+                ><img
+                  src="./Nucléaire et Radioactivité_files/Deuterium-tritium_fusion.png"
+                  alt="Schéma explicatif de la fusion nucléaire"
+                  class="imageimg"
+                />
+                <p class="imagesourcetext imagesourceright">
+                  <em>Crédit:&nbsp;Wykis, (Wikimedia, Public Domain)</em>
+                </p>
+              </div>
+              <p>
+                La gestion des déchets radioactifs constitue l'un des enjeux
+                majeurs de l'industrie nucléaire. Les réacteurs nucléaires
+                engendrent une variété de déchets hautement radioactifs,
+                caractérisés par une persistance dangereuse sur des échelles de
+                temps pouvant atteindre plusieurs milliers voire millions
+                d'années. Cette réalité impose la mise en œuvre impérative de
+                dispositifs de stockage à long terme, robustes et sécurisés.
+              </p>
+              <p>
+                Parmi les solutions envisagées pour relever ce défi, le concept
+                de stockage géologique profond émerge comme une piste sérieuse.
+                Ce schéma préconise l'immersion des déchets radioactifs dans des
+                formations géologiques stables et isolées, localisées à des
+                profondeurs conséquentes sous la surface terrestre. L'objectif
+                est d'assurer un confinement hermétique de ces matériaux, afin
+                de minimiser au maximum les risques potentiels de contamination
+                environnementale et humaine. Néanmoins, malgré les bénéfices
+                apparents de cette approche, des préoccupations persistent quant
+                à sa sécurité à long terme. En effet, l'éventualité de fuites
+                radioactives ou de contaminations des nappes phréatiques soulève
+                des interrogations sur la pérennité de ces dispositifs sur le
+                long terme. Par ailleurs, la question de l'acceptabilité sociale
+                représente un défi d'ampleur, avec de nombreuses collectivités
+                exprimant des réserves quant à l'implantation d'installations de
+                stockage de déchets nucléaires à proximité de leurs lieux de
+                résidence.
+              </p>
+              <h4>
+                <a name="La_fusion,_une_solution_?"
+                  >La fusion, une solution ?</a
+                >
+              </h4>
+              <p>
+                La fusion nucléaire, qui est le processus qui alimente le
+                soleil, est souvent présentée comme une solution potentielle aux
+                défis du nucléaire actuel. En effet, la fusion est une source
+                d'énergie sans déchets, de disponibilité quasi illimitée
+                puisqu'elle ne nécessite que de l'eau et des risques d'accident
+                minimes.
+              </p>
+              <div
+                class="box-floated"
+                style="
+                  float: none;
+                  max-width: 100%;
+                  clear: both;
+                  padding-top: 5px;
+                "
+              >
+                <div
+                  class="floatingtextbox"
+                  style="
+                    border: 3px solid rgb(200, 32, 64);
+                    background-color: rgb(255, 238, 238);
+                  "
+                >
+                  <span
+                    class="h4 title"
+                    style="
+                      border: 3px solid rgb(200, 32, 64);
+                      background-color: rgb(255, 238, 238);
+                    "
+                    >La fusion</span
+                  ><span class="floatingicon"
+                    ><svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style="
+                        color: rgb(200, 32, 64);
+                        background: rgb(255, 238, 238);
+                        border-radius: 50px;
+                      "
+                    >
+                      <path
+                        d="M10.97 8.265a1.45 1.45 0 0 0-.487.57.75.75 0 0 1-1.341-.67c.2-.402.513-.826.997-1.148C10.627 6.69 11.244 6.5 12 6.5c.658 0 1.369.195 1.934.619a2.45 2.45 0 0 1 1.004 2.006c0 1.033-.513 1.72-1.027 2.215-.19.183-.399.358-.579.508l-.147.123a4.329 4.329 0 0 0-.435.409v1.37a.75.75 0 1 1-1.5 0v-1.473c0-.237.067-.504.247-.736.22-.28.486-.517.718-.714l.183-.153.001-.001c.172-.143.324-.27.47-.412.368-.355.569-.676.569-1.136a.953.953 0 0 0-.404-.806C12.766 8.118 12.384 8 12 8c-.494 0-.814.121-1.03.265ZM13 17a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+                      ></path>
+                      <path
+                        d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"
+                      ></path></svg
+                  ></span>
+                  <div class="children">
+                    La fusion nucléaire est un processus où les noyaux légers
+                    d'hydrogène, tels que le deutérium et le tritium, fusionnent
+                    pour former des noyaux plus lourds, libérant ainsi une
+                    quantité massive d'énergie. Pour recréer cette réaction sur
+                    Terre, le projet ITER utilise un plasma, un gaz d'ions et
+                    d'électrons, chauffé à des températures extrêmes, souvent
+                    supérieures à 100 millions de degrés Celsius.
+                  </div>
+                </div>
+              </div>
+              <p>
+                Cependant, malgré les progrès de la recherche, la fusion
+                nucléaire est encore à un stade expérimental et nécessite
+                d'importants investissements en recherche et développement avant
+                de devenir une source d'énergie commerciale viable. En effet,
+                afin que la fusion se produise, il faut des conditions de
+                température et de pression extrêmes, ce qui rend la réalisation
+                de la fusion difficile et coûteuse en énergie et en argent.
+              </p>
+              <div class="notebox">
+                <span class="title h4">Le projet ITER</span>
+                <div class="children">
+                  <p>
+                    Situé à Cadarache, en France, ITER représente une
+                    collaboration internationale ambitieuse entre 35 pays. Son
+                    objectif est de construire un réacteur de fusion nucléaire à
+                    grande échelle. Le plasma est maintenu en suspension dans
+                    une enceinte magnétique grâce à un champ magnétique puissant
+                    généré par des aimants supraconducteurs.
+                  </p>
+                  <p>
+                    Une fois que le plasma atteint les conditions de fusion, les
+                    noyaux d'hydrogène fusionnent, libérant des neutrons et une
+                    énorme quantité d'énergie sous forme de chaleur. Cette
+                    chaleur est ensuite convertie en électricité à l'aide de
+                    turbines.
+                  </p>
+                  <p>
+                    Le projet ITER vise à démontrer la faisabilité technologique
+                    de la fusion nucléaire en produisant plus d'énergie de
+                    fusion qu'il n'en faut pour chauffer et maintenir le plasma.
+                    Bien que le projet soit encore en construction, il offre un
+                    espoir pour une source d'énergie propre, sûre et
+                    pratiquement inépuisable pour l'avenir de l'humanité.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="spacing"></div>
+          <div class="chapter-container">
+            <h2><a name="Conclusion">Conclusion</a></h2>
+            <p>
+              Au terme de cet article sur l'énergie nucléaire, il apparaît
+              clairement que cette source d'énergie est à la fois une merveille
+              de la science moderne et un défi pour l'humanité. Depuis les
+              premières découvertes des particules subatomiques jusqu'aux
+              développements les plus récents en physique nucléaire, l'énergie
+              nucléaire a constitué un formidable moteur de progrès scientifique
+              et technologique.
+            </p>
+            <p>
+              Les applications de l'énergie nucléaire dans des domaines aussi
+              variés que la médecine, l'industrie et la production d'électricité
+              ont apporté des avantages indéniables à la société. Des
+              traitements contre le cancer plus efficaces aux sources
+              d'électricité décarbonées, l'énergie nucléaire a permis de relever
+              certains des défis les plus pressants de notre époque.
+            </p>
+            <p>
+              Cependant, ces réalisations ne doivent pas nous aveugler sur les
+              risques et les défis associés à l'énergie nucléaire. Les accidents
+              catastrophiques de Tchernobyl et de Fukushima ont rappelé de
+              manière brutale les conséquences potentiellement dévastatrices
+              d'une utilisation imprudente de cette technologie. De plus, la
+              question non résolue de la gestion des déchets radioactifs reste
+              un obstacle majeur sur la voie d'une utilisation plus répandue et
+              durable de l'énergie nucléaire.
+            </p>
+            <p>
+              Dans ce contexte, il est impératif que les décideurs, les
+              scientifiques et la société dans son ensemble continuent à évaluer
+              de manière critique les avantages et les inconvénients de
+              l'énergie nucléaire. Les progrès technologiques, notamment dans le
+              domaine de la fusion nucléaire, offrent des perspectives
+              intéressantes pour surmonter certains des défis actuels et ouvrir
+              de nouvelles voies vers un avenir énergétique plus durable.
+            </p>
+            <p>
+              En fin de compte, l'avenir de l'énergie nucléaire dépendra de
+              notre capacité à concilier ses promesses avec ses risques, à
+              développer des politiques et des technologies qui maximisent ses
+              avantages tout en minimisant ses inconvénients. Dans cette quête,
+              il est essentiel que nous abordions ces questions de manière
+              rigoureuse et éclairée, en tenant compte à la fois des impératifs
+              scientifiques et des préoccupations éthiques et environnementales
+              qui guideront notre chemin vers un avenir énergétique durable.
+            </p>
+          </div>
+          <div class="spacing"></div>
+          <div class="chapter-container">
+            <h2><a name="Bibliographie">Bibliographie</a></h2>
+            <ul class="biblio">
+              <li>
+                <span class="bib-bold">
+                  Commissariat à l'énergie atomique (CEA).</span
+                >
+                <em>De la recherche à l'industrie.</em>
+                <a
+                  href="https://www.cea.fr/Pages/domaines-recherche/energies.aspx"
+                >
+                  <span style="font-family: monospace; font-weight: 500"
+                    >https://www.cea.fr/Pages/domaines-recherche/energies.aspx</span
+                  ></a
+                >.
+              </li>
+              <li>
+                <span class="bib-bold">
+                  Agence internationale de l'énergie atomique (IAEA).</span
+                >
+                <em>L'atome pour la paix et le développement.</em>
+                <a href="https://www.iaea.org/">
+                  <span style="font-family: monospace; font-weight: 500"
+                    >https://www.iaea.org/</span
+                  ></a
+                >.
+              </li>
+              <li>
+                <span class="bib-bold">
+                  Institut de radioprotection et de sûreté nucléaire
+                  (IRSN).</span
+                >
+                <a
+                  href="https://www.irsn.fr/savoir-comprendre/surete/parc-reacteurs-nucleaires-francais"
+                >
+                  <span style="font-family: monospace; font-weight: 500"
+                    >https://www.irsn.fr/savoir-comprendre/surete/parc-reacteurs-nucleaires-francais</span
+                  ></a
+                >.
+              </li>
+              <li>
+                <span class="bib-bold">
+                  Société française d'énergie nucléaire (SFEN).</span
+                >
+                <em
+                  >Permettre aux esprits curieux de partager de nouvelles idées
+                  sur l'énergie nucléaire.</em
+                >
+                <a href="https://www.sfen.org/">
+                  <span style="font-family: monospace; font-weight: 500"
+                    >https://www.sfen.org/</span
+                  ></a
+                >. Déc. 2023.
+              </li>
+              <li>
+                <span class="bib-bold"> Henri Becquerel.</span>
+                <em
+                  >Table générale des comptes rendus des séances de l'Académie
+                  des sciences.</em
+                >
+                Sur les radiations invisibles émises par les corps
+                phosphorescents, volumes 122-151, pages 420-421, 501-503.<a
+                  href="https://gallica.bnf.fr/ark:/12148/bpt6k30780/"
+                >
+                  <span style="font-family: monospace; font-weight: 500"
+                    >https://gallica.bnf.fr/ark:/12148/bpt6k30780/</span
+                  ></a
+                >. Jan. 1896.
+              </li>
+              <li>
+                <span class="bib-bold"> Électricité de France.</span>
+                <em>La Centrale Nucléaire du Tricastin.</em>
+                <a href="https://www.edf.fr/centrale-nucleaire-tricastin">
+                  <span style="font-family: monospace; font-weight: 500"
+                    >https://www.edf.fr/centrale-nucleaire-tricastin</span
+                  ></a
+                >.
+              </li>
+              <li>
+                <span class="bib-bold"
+                  >Représentation Permanente de la France auprès de l'Union
+                  européenne (RPUE).</span
+                >
+                Le nucléaire aujourd'hui en Europe et en France.<a
+                  href="https://ue.delegfrance.org/le-nucleaire-aujourd-hui-en-europe"
+                >
+                  <span style="font-family: monospace; font-weight: 500"
+                    >https://ue.delegfrance.org/le-nucleaire-aujourd-hui-en-europe</span
+                  ></a
+                >.
+              </li>
+              <li>
+                <span class="bib-bold"> GreenPeace.</span> De la recherche à
+                l'industrie.<a
+                  href="https://www.greenpeace.%20fr/nucleaire-solution-climat/"
+                >
+                  <span style="font-family: monospace; font-weight: 500"
+                    >https://www.greenpeace. fr/nucleaire-solution-climat/</span
+                  ></a
+                >.
+              </li>
+              <li>
+                <span class="bib-bold"> Iter.</span> Une énergie pour notre
+                avenir.<a href="https://www.iter.org/fr/">
+                  <span style="font-family: monospace; font-weight: 500"
+                    >https://www.iter.org/fr/</span
+                  ></a
+                >. Nov. 2006.
+              </li>
+              <li>
+                <span class="bib-bold"> Ministère de l'Économie.</span> France
+                2030 : Un plan ambitieux sur le nucléaire de demain.<a
+                  href="https://www.economie.gouv.fr/france-2030-plan-ambitieux-nucleaire-demai"
+                >
+                  <span style="font-family: monospace; font-weight: 500"
+                    >https://www.economie.gouv.fr/france-2030-plan-ambitieux-nucleaire-demai</span
+                  ></a
+                >n. Juin 2023.
+              </li>
+              <li>
+                <span class="bib-bold"> Musée Marie Curie.</span> 5e, Paris,
+                France.<a href="https://musee.curie.fr/">
+                  <span style="font-family: monospace; font-weight: 500"
+                    >https://musee.curie.fr/</span
+                  ></a
+                >.
+              </li>
+              <li>
+                <span class="bib-bold"> Marjane Satrapi.</span>
+                <em>Radioactive.</em> (Film). 2019.
+              </li>
+              <li>
+                <span class="bib-bold"> Christopher Nolan.</span>
+                <em>Oppenheimer.</em> (Film). 2023.
+              </li>
+              <li>
+                <span class="bib-bold"> Futura Science.</span>
+                <em>L'énergie nucléaire au cours de l'Histoire.</em>
+                <a
+                  href="https://www.futura-sciences.com/sciences/dossiers/physique-energie-nucleaire-a-z-126/page/2/"
+                >
+                  <span style="font-family: monospace; font-weight: 500"
+                    >https://www.futura-sciences.com/sciences/dossiers/physique-energie-nucleaire-a-z-126/page/2/</span
+                  ></a
+                >.
+              </li>
+              <li>
+                <span class="bib-bold">Institut of physics.</span>
+                <em>Curie's X-ray ambulances.</em>
+                <a href="https://spark.iop.org/curies-x-ray-ambulances">
+                  <span style="font-family: monospace; font-weight: 500"
+                    >https://spark.iop.org/curies-x-ray-ambulances</span
+                  ></a
+                >
+              </li>
+              <li>
+                <span class="bib-bold">Futura Science.</span>
+                <em>Personalités.</em> Henri Becquerel.<a
+                  href="https://www.futura-sciences.com/sciences/personnalites/sciences-henri-becquerel-1374/"
+                >
+                  <span style="font-family: monospace; font-weight: 500"
+                    >https://www.futura-sciences.com/sciences/personnalites/sciences-henri-becquerel-1374/</span
+                  ></a
+                >
+              </li>
+              <li>
+                <span class="bib-bold">Futura Science.</span>
+                <em>Personalités.</em> Marie Curie.<a
+                  href="https://www.futura-sciences.com/sciences/personnalites/sciences-marie-curie-222/"
+                >
+                  <span style="font-family: monospace; font-weight: 500"
+                    >https://www.futura-sciences.com/sciences/personnalites/sciences-marie-curie-222/</span
+                  ></a
+                >
+              </li>
+              <li>
+                <span class="bib-bold">Gouvernement français.</span>
+                <em>Centrales de production nucélaire d'EDF SA.</em>
+                <a
+                  href="https://www.data.gouv.fr/fr/datasets/centrales-de-production-nucleaire-dedf-sa/"
+                >
+                  <span style="font-family: monospace; font-weight: 500"
+                    >https://www.data.gouv.fr/fr/datasets/centrales-de-production-nucleaire-dedf-sa/</span
+                  ></a
+                >
+              </li>
+              <li>
+                <span class="bib-bold">Gouvernement français.</span>
+                <em
+                  >Installation production électrique éolienne par commune en
+                  2021.</em
+                >
+                <a
+                  href="https://www.data.gouv.fr/en/datasets/installation-production-electrique-eolienne-par-commune-en-2021/"
+                >
+                  <span style="font-family: monospace; font-weight: 500"
+                    >https://www.data.gouv.fr/en/datasets/installation-production-electrique-eolienne-par-commune-en-2021/</span
+                  ></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>

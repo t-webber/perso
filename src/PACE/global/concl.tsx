@@ -3,13 +3,13 @@ import React from "react";
 const Conclusion = () => {
   return (
     <div className="chapter-container">
-      <span className="h2">Conclusion</span>
+      <h2>Vers un avenir énergétique durable ?</h2>
       <p>
         Au terme de cet article sur l'énergie nucléaire, il apparaît clairement
         que cette source d'énergie est à la fois une merveille de la science
         moderne et un défi pour l'humanité. Depuis les premières découvertes des
         particules subatomiques jusqu'aux développements les plus récents en
-        physique nucléaire, l'énergie nucléaire a consituté un formidable moteur
+        physique nucléaire, l'énergie nucléaire a constitué un formidable moteur
         de progrès scientifique et technologique.
       </p>
       <p>

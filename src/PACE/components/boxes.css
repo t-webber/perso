@@ -7,8 +7,9 @@
   border-radius: 10px;
   background: hsl(219, 66%, 67%);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  margin: 20px 0;
+  margin: 10px;
   position: relative;
+  page-break-inside: avoid;
 }
 
 .floatingtextbox .title {
@@ -33,7 +34,7 @@
 
 .floatingtextbox .children {
   text-align: justify;
-  padding: 10px;
+  padding: 20px;
   margin-top: 10px;
 }
 
@@ -74,9 +75,10 @@
   justify-content: center;
   border: 1px solid black;
   max-width: 30%;
-  margin: 15px;
+  margin: 10px;
   padding: 15px;
   transition: 1s;
+  page-break-inside: avoid;
 }
 
 .imageboxwrapper:hover {

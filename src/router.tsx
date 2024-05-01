@@ -16,20 +16,20 @@ const Redirect = ({ to }: { to: string }) => {
 
 const routes = [
   {
-    path: "/",
-    element: <Redirect to="/pace" />,
-  },
-  {
     path: "/about",
     element: <CV />,
+  },
+  {
+    path: "/pace",
+    element: <PACE />,
   },
   {
     path: "/cv",
     element: <Redirect to="/about" />,
   },
   {
-    path: "/pace",
-    element: <PACE />,
+    path: "*",
+    element: <Redirect to="/pace" />,
   },
 ];
 

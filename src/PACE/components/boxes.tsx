@@ -7,7 +7,7 @@ import { BsExclamationCircle } from "react-icons/bs";
 import { GoQuestion } from "react-icons/go";
 
 const realTitle = (title: string, defaultTitle: string) => {
-  if (title === undefined) {
+  if (title === undefined || title === "") {
     return defaultTitle;
   } else {
     return title;
@@ -46,13 +46,12 @@ const FloatingTextBoxWrapper: React.FC<FloatingTextBoxWrapperProps> = ({
   Icon,
 }) => {
   return (
-    <div className="box-floated" style={{ float: side }}>
+    <div className="box-floated" style={{ float: side, ...style }}>
       <div
         className="floatingtextbox"
         style={{
           border: `3px solid ${borderColor}`,
           backgroundColor: backgroundColor,
-          ...style,
         }}
       >
         <span
@@ -164,21 +163,36 @@ const ImageBox = ({
   url: string;
   nofloat?: boolean;
   style?: React.CSSProperties;
-}) => (
-  <div
-    style={{ float: nofloat ? "none" : side, ...style }}
-    className="imageboxwrapper"
-  >
-    <span className="h5 imagetitle">{realTitle(title, "Fait étonnant")}</span>
-    <img src={url} alt={title} className="imageimg" />
-    <p className={"imagesourcetext imagesource" + side}>
-      <em>
-        Source:&nbsp;
-        {src}
-      </em>
-    </p>
-  </div>
-);
+}) => {
+  var margin;
+  if (side === "left") {
+    margin = { marginRight: "50px" };
+  } else if (side === "right") {
+    margin = { marginLeft: "50px" };
+  } else {
+    margin = {};
+  }
+  return (
+    <div
+      style={{ float: nofloat ? "none" : side, ...style, ...margin }}
+      className="imageboxwrapper"
+    >
+      {title === "" ? (
+        <span className="imagetitle"></span>
+      ) : (
+        <span className="h5 imagetitle">{realTitle(title, "")}</span>
+      )}
+
+      <img src={url} alt={title} className="imageimg" />
+      <p className={"imagesourcetext imagesource" + side}>
+        <em>
+          Crédit:&nbsp;
+          {src}
+        </em>
+      </p>
+    </div>
+  );
+};
 
 const NoteBox = ({
   title,

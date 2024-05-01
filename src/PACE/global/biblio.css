@@ -1,0 +1,18 @@
+.biblio {
+  counter-reset: cnt;
+}
+
+.biblio li::before {
+  content: "[" counter(cnt) "].\0000a0\0000a0";
+  counter-increment: cnt;
+}
+
+.biblio li {
+  /* font-size: large; */
+  /* font-weight: 400; */
+  margin-top: 12px;
+}
+
+.bib-bold {
+  font-weight: 500;
+}

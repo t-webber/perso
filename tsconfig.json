@@ -3,7 +3,7 @@
     "module": "esnext",
     "target": "es5",
     "moduleResolution": "node",
-    "jsx": "react",
+    "jsx": "react-jsx",
     "esModuleInterop": true,
     "baseUrl": "./src",
     "allowSyntheticDefaultImports": true,
